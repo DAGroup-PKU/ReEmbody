@@ -1,0 +1,358 @@
+{
+  "schema": "rssr.scene.v2",
+  "task_id": "dm6",
+  "objects": [
+    {
+      "id": "drawer_cabinet",
+      "shape": "cabinet",
+      "role": "fixture",
+      "color": "gray",
+      "position_m": [
+        -0.23165776114837364,
+        -0.9617188414731394,
+        1.0422612842419856
+      ],
+      "size_m": [
+        0.55,
+        0.28,
+        0.5839225684839713
+      ],
+      "yaw_rad": 0.0,
+      "rgba": [
+        0.58,
+        0.6,
+        0.57,
+        1.0
+      ],
+      "mobility": "static",
+      "parent_id": null,
+      "support_id": "table",
+      "head_center": [
+        0.72,
+        0.36
+      ],
+      "evidence": "Real1 head first frame: three-drawer beige cabinet at image right; metric size/pose approximated.",
+      "wall_m": 0.012,
+      "mass_kg": 1.0
+    },
+    {
+      "id": "bottom_drawer",
+      "shape": "open_box",
+      "role": "container",
+      "color": "gray",
+      "position_m": [
+        -0.23165776114837364,
+        -0.9317188414731394,
+        0.9789225684839711
+      ],
+      "size_m": [
+        0.49,
+        0.22,
+        0.12
+      ],
+      "yaw_rad": 0.0,
+      "rgba": [
+        0.55,
+        0.57,
+        0.54,
+        1.0
+      ],
+      "mobility": "slide",
+      "parent_id": "drawer_cabinet",
+      "support_id": "drawer_cabinet",
+      "head_center": [
+        0.38,
+        0.38
+      ],
+      "evidence": "Explicit engineered prototype from observed Real1 identity and source FK; approximate geometry, not metric reconstruction.",
+      "wall_m": 0.01,
+      "joint": {
+        "name": "bottom_drawer_slide",
+        "type": "slide",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor_in_object_m": [
+          0,
+          0,
+          0
+        ],
+        "range": [
+          0,
+          0.2
+        ]
+      },
+      "mass_kg": 0.12
+    },
+    {
+      "id": "bottom_handle_bar",
+      "shape": "box",
+      "role": "fixture",
+      "color": "gray",
+      "position_m": [
+        -0.23165776114837364,
+        -0.8067188414731394,
+        0.9442225684839711
+      ],
+      "size_m": [
+        0.13,
+        0.018,
+        0.018
+      ],
+      "yaw_rad": 0.0,
+      "rgba": [
+        0.68,
+        0.7,
+        0.67,
+        1.0
+      ],
+      "mobility": "static",
+      "parent_id": "bottom_drawer",
+      "support_id": "bottom_drawer",
+      "head_center": [
+        0.38,
+        0.385
+      ],
+      "evidence": "Explicit engineered prototype from observed Real1 identity and source FK; approximate geometry, not metric reconstruction.",
+      "mass_kg": 0.04
+    },
+    {
+      "id": "bottom_handle_post_a",
+      "shape": "box",
+      "role": "fixture",
+      "color": "gray",
+      "position_m": [
+        -0.2866577611483736,
+        -0.8187188414731394,
+        0.9442225684839711
+      ],
+      "size_m": [
+        0.018,
+        0.025,
+        0.025
+      ],
+      "yaw_rad": 0.0,
+      "rgba": [
+        0.68,
+        0.7,
+        0.67,
+        1.0
+      ],
+      "mobility": "static",
+      "parent_id": "bottom_drawer",
+      "support_id": "bottom_drawer",
+      "head_center": [
+        0.34,
+        0.385
+      ],
+      "evidence": "Explicit engineered prototype from observed Real1 identity and source FK; approximate geometry, not metric reconstruction.",
+      "mass_kg": 0.04
+    },
+    {
+      "id": "bottom_handle_post_b",
+      "shape": "box",
+      "role": "fixture",
+      "color": "gray",
+      "position_m": [
+        -0.17665776114837364,
+        -0.8187188414731394,
+        0.9442225684839711
+      ],
+      "size_m": [
+        0.018,
+        0.025,
+        0.025
+      ],
+      "yaw_rad": 0.0,
+      "rgba": [
+        0.68,
+        0.7,
+        0.67,
+        1.0
+      ],
+      "mobility": "static",
+      "parent_id": "bottom_drawer",
+      "support_id": "bottom_drawer",
+      "head_center": [
+        0.42,
+        0.385
+      ],
+      "evidence": "Explicit engineered prototype from observed Real1 identity and source FK; approximate geometry, not metric reconstruction.",
+      "mass_kg": 0.04
+    },
+    {
+      "id": "middle_drawer_front",
+      "shape": "box",
+      "role": "fixture",
+      "color": "gray",
+      "position_m": [
+        -0.23165776114837364,
+        -0.8147188414731394,
+        1.1089225684839712
+      ],
+      "size_m": [
+        0.49,
+        0.018,
+        0.12
+      ],
+      "yaw_rad": 0.0,
+      "rgba": [
+        0.56,
+        0.58,
+        0.55,
+        1.0
+      ],
+      "mobility": "static",
+      "parent_id": "drawer_cabinet",
+      "support_id": "drawer_cabinet",
+      "head_center": [
+        0.38,
+        0.285
+      ],
+      "evidence": "Explicit engineered prototype from observed Real1 identity and source FK; approximate geometry, not metric reconstruction.",
+      "mass_kg": 0.04
+    },
+    {
+      "id": "middle_handle",
+      "shape": "box",
+      "role": "fixture",
+      "color": "gray",
+      "position_m": [
+        -0.23165776114837364,
+        -0.7937188414731394,
+        1.1089225684839712
+      ],
+      "size_m": [
+        0.13,
+        0.018,
+        0.018
+      ],
+      "yaw_rad": 0.0,
+      "rgba": [
+        0.68,
+        0.7,
+        0.67,
+        1.0
+      ],
+      "mobility": "static",
+      "parent_id": "drawer_cabinet",
+      "support_id": "drawer_cabinet",
+      "head_center": [
+        0.38,
+        0.27
+      ],
+      "evidence": "Explicit engineered prototype from observed Real1 identity and source FK; approximate geometry, not metric reconstruction.",
+      "mass_kg": 0.04
+    },
+    {
+      "id": "top_drawer_front",
+      "shape": "box",
+      "role": "fixture",
+      "color": "gray",
+      "position_m": [
+        -0.23165776114837364,
+        -0.8147188414731394,
+        1.238922568483971
+      ],
+      "size_m": [
+        0.49,
+        0.018,
+        0.12
+      ],
+      "yaw_rad": 0.0,
+      "rgba": [
+        0.56,
+        0.58,
+        0.55,
+        1.0
+      ],
+      "mobility": "static",
+      "parent_id": "drawer_cabinet",
+      "support_id": "drawer_cabinet",
+      "head_center": [
+        0.38,
+        0.13
+      ],
+      "evidence": "Explicit engineered prototype from observed Real1 identity and source FK; approximate geometry, not metric reconstruction.",
+      "mass_kg": 0.04
+    },
+    {
+      "id": "top_handle",
+      "shape": "box",
+      "role": "fixture",
+      "color": "gray",
+      "position_m": [
+        -0.23165776114837364,
+        -0.7937188414731394,
+        1.238922568483971
+      ],
+      "size_m": [
+        0.13,
+        0.018,
+        0.018
+      ],
+      "yaw_rad": 0.0,
+      "rgba": [
+        0.68,
+        0.7,
+        0.67,
+        1.0
+      ],
+      "mobility": "static",
+      "parent_id": "drawer_cabinet",
+      "support_id": "drawer_cabinet",
+      "head_center": [
+        0.38,
+        0.09
+      ],
+      "evidence": "Explicit engineered prototype from observed Real1 identity and source FK; approximate geometry, not metric reconstruction.",
+      "mass_kg": 0.04
+    },
+    {
+      "id": "red_block",
+      "shape": "box",
+      "role": "object",
+      "color": "red",
+      "position_m": [
+        0.3399260233103623,
+        -0.8406551473972369,
+        0.7753
+      ],
+      "size_m": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "yaw_rad": -1.1622595003386889,
+      "rgba": [
+        0.72,
+        0.06,
+        0.08,
+        1.0
+      ],
+      "mobility": "free",
+      "parent_id": null,
+      "support_id": "table",
+      "head_center": [
+        0.077,
+        0.53
+      ],
+      "evidence": "Real1 episode 0 head first frame: a red cuboid lies left of a three-drawer cabinet; metric size/pose approximated.",
+      "mass_kg": 0.04
+    }
+  ],
+  "bindings": {
+    "targets": [
+      "red_block"
+    ],
+    "containers": [
+      "bottom_drawer"
+    ],
+    "excluded": [],
+    "particles": [],
+    "target_region": null,
+    "articulation": "bottom_drawer_slide"
+  }
+}

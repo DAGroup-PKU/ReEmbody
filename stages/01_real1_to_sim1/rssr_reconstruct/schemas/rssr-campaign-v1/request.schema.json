@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "mode",
+    "run_root",
+    "dataset_manifest",
+    "runtime",
+    "knowledge",
+    "execution"
+  ],
+  "properties": {
+    "schema": {
+      "const": "rssr.campaign.request.v1"
+    },
+    "mode": {
+      "enum": [
+        "train",
+        "infer"
+      ]
+    },
+    "run_root": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dataset_manifest": {
+      "type": "string",
+      "minLength": 1
+    },
+    "runtime": {
+      "type": "object"
+    },
+    "knowledge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "initialization",
+        "imports"
+      ],
+      "properties": {
+        "initialization": {
+          "enum": [
+            "empty",
+            "selective",
+            "frozen"
+          ]
+        },
+        "imports": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "reconstruction": {
+              "type": "string",
+              "minLength": 1
+            },
+            "camera": {
+              "type": "string",
+              "minLength": 1
+            },
+            "retarget": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    "execution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "active_cases",
+        "render_sim_videos",
+        "max_k3_requests",
+        "run_real2"
+      ],
+      "properties": {
+        "active_cases": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "render_sim_videos": {
+          "type": "boolean"
+        },
+        "max_k3_requests": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "description": "Cumulative request ceiling; null explicitly removes the ceiling while retaining accounting."
+        },
+        "run_real2": {
+          "const": false
+        }
+      }
+    }
+  }
+}

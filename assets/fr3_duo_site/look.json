@@ -1,0 +1,1 @@
+{"exposure_ev": -0.65, "camera_exposure_offset_ev": {"head": 0.0, "left_wrist": 0.0, "right_wrist": 0.0}, "fit": "style_fit.py regions vs the D455 frame: cloth 1.04-1.09, carpet 0.92-1.01, pillar 1.06, feet 0.96-1.01 (render/real sRGB) at -0.6 EV; -0.65 EV adopted. Wrist offsets 0: no wrist reference frames of the desk"}

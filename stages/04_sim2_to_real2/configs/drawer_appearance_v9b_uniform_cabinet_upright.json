@@ -1,0 +1,31 @@
+{
+  "schema": "rssr.drawer.appearance.visual_only.v9b_uniform_cabinet_upright",
+  "base_render_config": "render_config_center_sdk_v1.json",
+  "front_height_m": 0.0835,
+  "front_width_m": 0.31181818181818177,
+  "moving_front_local_y_shift_m": 0.018,
+  "cabinet_body_linear_rgb": [
+    0.5104,
+    0.468,
+    0.3876
+  ],
+  "handle_linear_rgb": [
+    0.72,
+    0.69,
+    0.61
+  ],
+  "visual_front_trim_width_m": 0.01918181818181823,
+  "visual_front_trim_depth_m": 0.002,
+  "visual_front_trim_y_from_cabinet_front_m": 0.014,
+  "visual_top_bridge_depth_m": 0.016,
+  "visual_top_bridge_y_from_cabinet_front_m": 0.007,
+  "visual_top_edge_strip_width_m": 0.006,
+  "visual_top_edge_strip_raise_m": 0.0006,
+  "visual_side_eave_height_m": 0.012,
+  "visual_side_eave_outset_m": 0.0005,
+  "handle_tube_radius_m": 0.004,
+  "handle_half_span_m": 0.036,
+  "handle_mount_y_m": -0.008,
+  "handle_bar_y_m": 0.008,
+  "note": "All cabinet, moving drawer and front materials use the same linear RGB. Lighting still creates natural shading. Blender-render visual replacement only; source meshes, MuJoCo collision, native poses, camera mounts/FOV, and task success are unchanged."
+}

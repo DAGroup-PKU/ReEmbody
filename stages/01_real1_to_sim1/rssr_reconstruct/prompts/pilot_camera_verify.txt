@@ -1,0 +1,48 @@
+Verify six current-episode views: Sim1 and Sim2, each with head, left_wrist,
+right_wrist. Compare them with the corresponding Real1 references. This is a
+virtual camera role/appearance check, never hardware calibration or physics
+task verification. Sim1 need not complete the task. Sim2 may have different
+robot geometry and repaired object motion; neither identical robot pixels nor
+identical wrist world trajectories are expected. Head is fixed relative to the
+table; each wrist follows its own embodiment's wrist. Never accept cropping,
+mirroring, dynamic look-at or frame remapping as camera alignment.
+
+There are three sheets, in head / left_wrist / right_wrist order. Each sheet
+contains ONE camera role only. Columns are Real1, Sim1, Sim2 (source-only calls
+omit Sim2); rows are increasing time. Read the printed stage and frame labels.
+Compare each simulated tile directly with the Real1 tile in the SAME row of
+the SAME sheet. Do not borrow visibility, uprightness or object evidence from
+another role or time. Initial optical consistency is only a relative geometry
+guard against a flipped target rig; the estimated Sim1 rig may itself be wrong.
+Both simulation stages must still be visually checked against Real1.
+
+Check upright optical orientation, role/side identity, adequate FOV, first-frame
+table/object layout consistency and whether the key interaction is observable
+in the provided keyframes. Numerical projection alone cannot prove visibility
+through geometry. Fail or mark unresolved when views or evidence are missing.
+For each panel, distinguish an object actually visible in the RGB image from
+an object merely projected into the frustum. A robot body covering most of a
+wrist image is not acceptable just because a small basket edge is visible.
+Compare the amount of usable tabletop and foreground obstruction with its
+Real1 panel. Do not excuse dominant obstruction as an embodiment difference.
+Use raster_visibility diagnostics for actual occlusion; projected bounds do
+not prove that an object is visible. Do not copy another panel's observations.
+
+Upright and correct side alone do not establish orientation_consistent.
+Compare optical elevation, visible object faces and tabletop perspective with
+Real1. Compare usable tabletop extent and background placement for fov_adequate;
+a largely off-table view is not equivalent to Real1's mostly tabletop view just
+because an object corner is visible or a minimum numerical threshold passes.
+Render colour/texture differences alone are not camera errors. When diagnostics
+include source_scene_review.camera_issues, check each against the current
+source images. Resolve it with specific current visual evidence in the relevant
+view's reason, or set the affected flag false and list the concern in unresolved.
+Prior stage pass flags and numeric coverage values never substitute for this
+visual comparison. Do not accept and simultaneously describe an unresolved
+viewpoint or usable-FOV mismatch in your reason.
+
+Return JSON: {"images_visible":true,"views":[{"kind":"sim1","view":"head",
+"orientation_consistent":true,"fov_adequate":true,"role_correct":true,
+"key_objects_visible":true,"reason":"specific visual evidence"}, ...],
+"unresolved":[]}. Exactly six distinct kind/view combinations are required.
+Do not provide physics/task success or measured-calibration claims.

@@ -1,0 +1,21 @@
+{
+  "schema": "reembody.example.v1",
+  "example_id": "drawer_fr3_ep000",
+  "task": "open_insert_close_drawer",
+  "source_embodiment": "agilex_cobot_magic",
+  "target_embodiment": "dual_arm_franka_fr3_robotiq_2f85",
+  "source_case": "drawer_ep000000",
+  "frames": 470,
+  "fps": 30,
+  "duration_s": 15.667,
+  "task_prompt": [
+    "Put_the_block_in_the_drawer."
+  ],
+  "sim2_admitted": true,
+  "stages": {
+    "01_real1_source": "Recorded source COBOT-Magic parquet trajectory + 3 synchronized camera videos",
+    "02_sim1_reconstructed": "Reconstructed MuJoCo scene, fitted object geometry, and source action replay",
+    "03_sim2_target": "Admitted Dual-Arm Franka FR3 MuJoCo trajectory, portable scene.xml, controller, and admission receipt",
+    "04_real2_rendered": "Blender Cycles 3-view 224x224 renders, start/end keyframes, and self-contained LeRobot v2.1 episode"
+  }
+}

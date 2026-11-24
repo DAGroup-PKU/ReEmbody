@@ -1,0 +1,16 @@
+<mujoco model="s1_stack_blocks_objects">
+  <asset />
+  <worldbody>
+    <body name="blue_cube" pos="0.226597262886 -0.710893012749 0.8253" quat="-0.691613356072 0 0 0.722267932074">
+      <freejoint name="blue_cube_free" />
+      <geom name="blue_cube_geom" type="box" size="0.025 0.025 0.025" pos="0 0 0" mass="0.04" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.08 0.38 0.52 1" />
+    </body>
+    <body name="purple_cube" pos="-0.207344063267 -0.740976308949 0.8253" quat="0.789401028077 0 0 -0.613877851751">
+      <freejoint name="purple_cube_free" />
+      <geom name="purple_cube_geom" type="box" size="0.025 0.025 0.025" pos="0 0 0" mass="0.04" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.27 0.2 0.45 1" />
+    </body>
+    <body name="stack_region" pos="0.0214266014621 -0.686327767299 0.8018" quat="1 0 0 0">
+      <geom name="stack_region_geom" type="box" size="0.09 0.08 0.0015" pos="0 0 0" mass="0.001" contype="0" conaffinity="0" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.05 0.05 0.05 0.35" />
+    </body>
+  </worldbody>
+</mujoco>

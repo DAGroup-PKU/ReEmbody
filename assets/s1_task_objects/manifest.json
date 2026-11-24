@@ -1,0 +1,54 @@
+{
+  "drawer": {
+    "source_scene": "result/sim2-refine/drawer_v9_lean30_start_batch_20261101_attempt_01/cases/drawer_center_train_029__clean/attempt_01/native/execute/scene.xml",
+    "source_scene_sha256": "c16de84cf4182da36227f21adc5cf4f6b849a0fb5bb974ad016b3655487aeb28",
+    "source_template": "result/sim2-refine/drawer_center_layout_spec_20261101_attempt_01/engineered_asset/definition.json",
+    "source_template_sha256": "96d4ba22da01d022b36d52ef2840be5d6ea801bef4fe1cead1904edfffe0ad26",
+    "objects_xml_sha256": "bc183fe6f1ac09ec23bb1f7531bdf1c58fdea727df1ca04c8f4f8a06ea65fa61",
+    "bodies": [
+      "drawer_cabinet",
+      "red_block"
+    ],
+    "meshes": 0,
+    "s1_world_pos": {
+      "drawer_cabinet": "-0.00904 -0.745153061224 0.9753",
+      "red_block": "0.259551771005 -0.440823758174 0.8253"
+    }
+  },
+  "stack_cups": {
+    "source_scene": "result/sim2-refine/v9_lean30_cup_pilot_20261101_attempt_01/lean30_b16_l20_tiltfirst/ep000/execute/scene.xml",
+    "source_scene_sha256": "cca5ae60031dc615be655d3ff7501172b1efbcbea8d1e65b78feaecb724bf9e1",
+    "source_template": "sim1-sim2/s1_short_refine_v2/rssr_augment/measured_s1.py",
+    "source_template_sha256": "40aa8da645619db8c5cb1daf78f9264172f04bef0ab336aabe8dd2987cd45768",
+    "objects_xml_sha256": "2e7c9c5d6e679879c61d9bd0b4b7ba793613e0aeee66c5a7555bdce417c41f68",
+    "bodies": [
+      "cup_left_base",
+      "cup_right_upper",
+      "stack_region"
+    ],
+    "meshes": 64,
+    "s1_world_pos": {
+      "cup_left_base": "0.31292478485 -0.750064448461 0.8453",
+      "cup_right_upper": "-0.343759106432 -0.575938021879 0.8453",
+      "stack_region": "0.00291847295674 -0.767539899934 0.8018"
+    }
+  },
+  "stack_blocks": {
+    "source_scene": "result/sim2-refine/v8_fixed80_cup_block_20261029_attempt_02/block/batch_00000_00499/runs/near200_00000/execute/scene.xml",
+    "source_scene_sha256": "88e9cd78e3cf640b691f3355e44da76e530f8297afcda76c73215d8c1926e03a",
+    "source_template": "data/150case/cases/stack_blocks_ep000000/asset/definition.json",
+    "source_template_sha256": "ccc7dd69ab17786492e7a72973a02f903437c904706a1664ec5d5d39e3f78ac5",
+    "objects_xml_sha256": "547623b8bdb5620b314690474e39871426429a18433aae988ce292a9e0e68678",
+    "bodies": [
+      "blue_cube",
+      "purple_cube",
+      "stack_region"
+    ],
+    "meshes": 0,
+    "s1_world_pos": {
+      "blue_cube": "0.226597262886 -0.710893012749 0.8253",
+      "purple_cube": "-0.207344063267 -0.740976308949 0.8253",
+      "stack_region": "0.0214266014621 -0.686327767299 0.8018"
+    }
+  }
+}

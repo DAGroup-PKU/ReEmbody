@@ -1,0 +1,138 @@
+{
+  "schema": "rssr.task.evaluation.v1",
+  "contract_id": "901a66658ebbad50f4577d491405603c174a8a0d78e2dabfebf8193d60a1d389",
+  "task_id": "dm7",
+  "geometry_evaluation": "sphere_analytic_v1",
+  "task_success": true,
+  "hard_constraints": {
+    "robot_table_penetration_le_3mm": true,
+    "limited_joints_within_2mrad_or_2mm": true,
+    "solver_no_warnings": true,
+    "waist_coupling_within_1mrad": true,
+    "gripper_coupling_within_2mrad": true
+  },
+  "predicates": [
+    {
+      "id": "lift_with_contact_00",
+      "kind": "lift_with_contact",
+      "passed": true,
+      "measurements": {
+        "max_lift_m": 0.05741455805637963,
+        "max_lift_with_hand_contact_m": 0.05741455805637963
+      }
+    },
+    {
+      "id": "lift_with_contact_01",
+      "kind": "lift_with_contact",
+      "passed": true,
+      "measurements": {
+        "max_lift_m": 0.17755146597744742,
+        "max_lift_with_hand_contact_m": 0.17755146597744742
+      }
+    },
+    {
+      "id": "inside_region_02",
+      "kind": "inside_region",
+      "passed": true,
+      "measurements": {
+        "reference_frame": "reference_object_local",
+        "reference_object": "stack_region",
+        "object": "cup_left_base",
+        "evaluation_window_source_time_s": [
+          14.77000000000656,
+          14.965000000006798
+        ],
+        "final_reference_axes_in_world": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "final_object_extent_min_m": [
+          -0.042596156913789956,
+          -0.04122599608219257,
+          -0.0018000056804812203
+        ],
+        "final_object_extent_max_m": [
+          0.04309298354911846,
+          0.04446314398376017,
+          0.0881999949115384
+        ],
+        "final_signed_xy_clearance_m": [
+          0.04890701645088154,
+          0.037536856016239836
+        ],
+        "measurement_basis": "same bounding extents, frame, tolerance and window as the frozen predicate",
+        "maximum_relation_violation_m": 0.0
+      }
+    },
+    {
+      "id": "cup_nested_03",
+      "kind": "cup_nested",
+      "passed": true,
+      "measurements": {
+        "support_policy": "cup_nesting_v1",
+        "minimum_radial_clearance_m": 0.004450852398777285,
+        "minimum_floor_clearance_m": 0.012242002722472556,
+        "floor_penetration_tolerance_m": 0.0005,
+        "floor_penetration_excess_m": 0.0,
+        "minimum_overlap_clearance_m": 0.06125795400396182,
+        "maximum_relation_violation_m": 0.0
+      }
+    },
+    {
+      "id": "object_contact_04",
+      "kind": "object_contact",
+      "passed": true,
+      "measurements": {
+        "contact_fraction": 1.0
+      }
+    },
+    {
+      "id": "base_placed_before_stack_05",
+      "kind": "base_placed_before_stack",
+      "passed": true,
+      "measurements": {
+        "base_placement_observed": true,
+        "stack_contact_observed": true,
+        "first_base_placed_s": 8.049999999998347,
+        "first_upper_supported_contact_s": 12.200000000003419,
+        "order_observable": true,
+        "basis": "first qualifying simulator states; a missing event is not a reversed order"
+      }
+    },
+    {
+      "id": "stable_06",
+      "kind": "stable",
+      "passed": true,
+      "measurements": {
+        "maximum_motion_m": 4.7542540215655087e-07
+      }
+    },
+    {
+      "id": "released_07",
+      "kind": "released",
+      "passed": true,
+      "measurements": {}
+    }
+  ],
+  "failed_predicates": [],
+  "hard_failures": [],
+  "rank": [
+    0,
+    0
+  ],
+  "state_source": "simulator_numeric_trace",
+  "render_calls": 0
+}

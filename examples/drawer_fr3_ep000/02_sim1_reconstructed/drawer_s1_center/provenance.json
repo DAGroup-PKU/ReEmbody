@@ -1,0 +1,9 @@
+{
+ "s1_spec": "result/sim2-refine/drawer_center_layout_spec_20261101_attempt_01",
+ "s1_asset_manifest_sha256": "607a616b2f70e1669b7dd101241d483f252043ed442790dc3cfd02714d6157df",
+ "s1_definition_sha256": "96d4ba22da01d022b36d52ef2840be5d6ea801bef4fe1cead1904edfffe0ad26",
+ "fr3_env_xml": "data/150case/cases/drawer_ep000000/source_reference/scene.xml",
+ "fr3_env_xml_sha256": "87d8a81941c6de632920706c92aa3a09b03135a2018f318e2dcfda4e92f468de",
+ "z_shift_m": -0.050000000000000044,
+ "note": "S1 asset copied byte for byte; template scene lowered to the FR3 desk height, nothing else changed"
+}

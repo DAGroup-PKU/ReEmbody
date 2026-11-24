@@ -1,0 +1,92 @@
+{
+  "schema": "reembody.assets.manifest.v1",
+  "bundled_assets": {
+    "fr3_duo_site/desk_scene_bgfit_v3_runtime.blend": {
+      "size_bytes": 199649,
+      "sha256": "ee8efa4bc54f9db3b78d7196b45ae37c3d59d38a7a23ef45adc254f39125b1e8"
+    },
+    "fr3_duo_site/look.json": {
+      "size_bytes": 323,
+      "sha256": "7dbc10c99664644bbc5c76fc02808283ad7722044d8a2df9853ef7caf5df8478"
+    },
+    "fr3_duo_site/measured_cups.blend": {
+      "size_bytes": 139918,
+      "sha256": "b1350ea0a701d335e4a10d3a4f62544a3c11892ff091d36531b50f6e504453df"
+    },
+    "fr3_duo_site/site_parameters.json": {
+      "size_bytes": 4896,
+      "sha256": "3991fe691f90021ace098f82577562e336756274947fbaeadd83a63767ecdb99"
+    },
+    "fr3_duo_site/site_scene.blend": {
+      "size_bytes": 965930,
+      "sha256": "f4f7f6b0233eb09c916cb805708be432eca69cbe2edb8f859b698885d935e46c"
+    },
+    "fr3_duo_site/site_scene.json": {
+      "size_bytes": 7927,
+      "sha256": "d524d03d545bedc8f310845a73fc33c5b4b85be62184c1ed1a4fbe6fdd62ed2d"
+    },
+    "fr3_duo_site/textures/03dcf50ead7d9a3352e3307fc0f7b82189835779ebca06cfa54502e2192cda2f.png": {
+      "size_bytes": 99574,
+      "sha256": "03dcf50ead7d9a3352e3307fc0f7b82189835779ebca06cfa54502e2192cda2f"
+    },
+    "fr3_duo_site/textures/667e77d41c6f18cd778b32dee6a62a9b06580a67ef653a8813bc95bcf4ffd2fe.hdr": {
+      "size_bytes": 6465492,
+      "sha256": "667e77d41c6f18cd778b32dee6a62a9b06580a67ef653a8813bc95bcf4ffd2fe"
+    },
+    "fr3_duo_site/textures/86a98e6088d7fee335a8ad4ab78237556e1b22b68618f36337b49f3c2c6cb56d.png": {
+      "size_bytes": 161874,
+      "sha256": "86a98e6088d7fee335a8ad4ab78237556e1b22b68618f36337b49f3c2c6cb56d"
+    },
+    "s1_task_objects/drawer/definition.json": {
+      "size_bytes": 14092,
+      "sha256": "96d4ba22da01d022b36d52ef2840be5d6ea801bef4fe1cead1904edfffe0ad26"
+    },
+    "s1_task_objects/drawer/objects.xml": {
+      "size_bytes": 6493,
+      "sha256": "bc183fe6f1ac09ec23bb1f7531bdf1c58fdea727df1ca04c8f4f8a06ea65fa61"
+    },
+    "s1_task_objects/drawer_engineered/definition.json": {
+      "size_bytes": 14092,
+      "sha256": "96d4ba22da01d022b36d52ef2840be5d6ea801bef4fe1cead1904edfffe0ad26"
+    },
+    "s1_task_objects/stack_blocks/definition.json": {
+      "size_bytes": 4721,
+      "sha256": "f508cff0fd651c5923e64572a43f93c2e9f9bc96f1fe9a5c778ced1d015b83ec"
+    },
+    "s1_task_objects/stack_blocks/objects.xml": {
+      "size_bytes": 1205,
+      "sha256": "547623b8bdb5620b314690474e39871426429a18433aae988ce292a9e0e68678"
+    },
+    "s1_task_objects/stack_cups/measured_s1.py": {
+      "size_bytes": 8755,
+      "sha256": "eb77c3f7d7d90dc4afff3189301c62d6470b8ac270a3d544c6a0535aa9b45e34"
+    },
+    "s1_task_objects/stack_cups/objects.xml": {
+      "size_bytes": 53314,
+      "sha256": "2e7c9c5d6e679879c61d9bd0b4b7ba793613e0aeee66c5a7555bdce417c41f68"
+    },
+    "urdf/README.md": {
+      "size_bytes": 504,
+      "sha256": "e2f61db0dcfbcbd0ee5cbbc1df71f6f0410161c9a5cfe1bc90383553e3867821"
+    },
+    "urdf/fr3_duo_factory.urdf": {
+      "size_bytes": 63894,
+      "sha256": "d651e165bfd372e289392bffcdcce72a6dcb2f13e94683bbc41a2b993baac3ea"
+    }
+  },
+  "external_robot_assets": {
+    "franka_description": {
+      "repo": "https://github.com/frankarobotics/franka_description.git",
+      "commit": "7aeeddc449edf8d62b594f9e36a81da53e7796f9",
+      "target_dir": "third_party/franka_description"
+    },
+    "mujoco_menagerie": {
+      "repo": "https://github.com/google-deepmind/mujoco_menagerie.git",
+      "required_subdirs": [
+        "franka_fr3_v2",
+        "robotiq_2f85"
+      ],
+      "target_dir": "third_party/mujoco_menagerie"
+    }
+  }
+}

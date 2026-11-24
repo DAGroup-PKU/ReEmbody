@@ -1,0 +1,280 @@
+{
+  "codebase_version": "v2.1",
+  "robot_type": "astribot_s1_full4torso_sim2",
+  "campaign_id": "s1_previous_filter92_and_refined19",
+  "physical_campaign_id": "s1_heightfit_3x1_20261017",
+  "table_baseline_m": 0.8,
+  "total_episodes": 111,
+  "total_frames": 151561,
+  "total_tasks": 1,
+  "total_videos": 333,
+  "total_chunks": 1,
+  "chunks_size": 1000,
+  "fps": 30,
+  "splits": {
+    "train": "0:111"
+  },
+  "data_path": "data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet",
+  "video_path": "videos/chunk-{episode_chunk:03d}/{video_key}/episode_{episode_index:06d}.mp4",
+  "features": {
+    "observation.state": {
+      "dtype": "float32",
+      "shape": [
+        32
+      ],
+      "names": [
+        [
+          "astribot_torso_joint_1",
+          "astribot_torso_joint_2",
+          "astribot_torso_joint_3",
+          "astribot_torso_joint_4",
+          "astribot_head_joint_1",
+          "astribot_head_joint_2",
+          "astribot_arm_left_joint_1",
+          "astribot_arm_left_joint_2",
+          "astribot_arm_left_joint_3",
+          "astribot_arm_left_joint_4",
+          "astribot_arm_left_joint_5",
+          "astribot_arm_left_joint_6",
+          "astribot_arm_left_joint_7",
+          "astribot_gripper_left_joint_L1",
+          "astribot_gripper_left_joint_L11",
+          "astribot_gripper_left_joint_L2",
+          "astribot_gripper_left_joint_R1",
+          "astribot_gripper_left_joint_R11",
+          "astribot_gripper_left_joint_R2",
+          "astribot_arm_right_joint_1",
+          "astribot_arm_right_joint_2",
+          "astribot_arm_right_joint_3",
+          "astribot_arm_right_joint_4",
+          "astribot_arm_right_joint_5",
+          "astribot_arm_right_joint_6",
+          "astribot_arm_right_joint_7",
+          "astribot_gripper_right_joint_L1",
+          "astribot_gripper_right_joint_L11",
+          "astribot_gripper_right_joint_L2",
+          "astribot_gripper_right_joint_R1",
+          "astribot_gripper_right_joint_R11",
+          "astribot_gripper_right_joint_R2"
+        ]
+      ]
+    },
+    "action": {
+      "dtype": "float32",
+      "shape": [
+        22
+      ],
+      "names": [
+        [
+          "astribot_torso_joint_1",
+          "astribot_torso_joint_2",
+          "astribot_head_joint_1",
+          "astribot_head_joint_2",
+          "astribot_torso_joint_3",
+          "astribot_torso_joint_4",
+          "astribot_arm_left_joint_1",
+          "astribot_arm_left_joint_2",
+          "astribot_arm_left_joint_3",
+          "astribot_arm_left_joint_4",
+          "astribot_arm_left_joint_5",
+          "astribot_arm_left_joint_6",
+          "astribot_arm_left_joint_7",
+          "astribot_gripper_left_joint_L1",
+          "astribot_arm_right_joint_1",
+          "astribot_arm_right_joint_2",
+          "astribot_arm_right_joint_3",
+          "astribot_arm_right_joint_4",
+          "astribot_arm_right_joint_5",
+          "astribot_arm_right_joint_6",
+          "astribot_arm_right_joint_7",
+          "astribot_gripper_right_joint_L1"
+        ]
+      ]
+    },
+    "observation.images.cam_high": {
+      "dtype": "video",
+      "shape": [
+        3,
+        224,
+        224
+      ],
+      "names": [
+        "channels",
+        "height",
+        "width"
+      ],
+      "info": {
+        "video.height": 224,
+        "video.width": 224,
+        "video.codec": "h264",
+        "video.pix_fmt": "yuv420p",
+        "video.is_depth_map": false,
+        "video.fps": 30,
+        "video.channels": 3,
+        "has_audio": false
+      }
+    },
+    "observation.images.cam_left_wrist": {
+      "dtype": "video",
+      "shape": [
+        3,
+        224,
+        224
+      ],
+      "names": [
+        "channels",
+        "height",
+        "width"
+      ],
+      "info": {
+        "video.height": 224,
+        "video.width": 224,
+        "video.codec": "h264",
+        "video.pix_fmt": "yuv420p",
+        "video.is_depth_map": false,
+        "video.fps": 30,
+        "video.channels": 3,
+        "has_audio": false
+      }
+    },
+    "observation.images.cam_right_wrist": {
+      "dtype": "video",
+      "shape": [
+        3,
+        224,
+        224
+      ],
+      "names": [
+        "channels",
+        "height",
+        "width"
+      ],
+      "info": {
+        "video.height": 224,
+        "video.width": 224,
+        "video.codec": "h264",
+        "video.pix_fmt": "yuv420p",
+        "video.is_depth_map": false,
+        "video.fps": 30,
+        "video.channels": 3,
+        "has_audio": false
+      }
+    },
+    "timestamp": {
+      "dtype": "float32",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "physical_query_time_s": {
+      "dtype": "float64",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "state_time_s": {
+      "dtype": "float64",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "command_time_s": {
+      "dtype": "float64",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "frame_index": {
+      "dtype": "int64",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "episode_index": {
+      "dtype": "int64",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "index": {
+      "dtype": "int64",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "task_index": {
+      "dtype": "int64",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "physical_index": {
+      "dtype": "int64",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "source_case_index": {
+      "dtype": "int64",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "appearance_index": {
+      "dtype": "int64",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "state_source_index": {
+      "dtype": "int64",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "command_source_index": {
+      "dtype": "int64",
+      "shape": [
+        1
+      ],
+      "names": null
+    }
+  },
+  "expected_episodes": 111,
+  "full_campaign_complete": true,
+  "lighting_variants_per_physical": 1,
+  "hardware_sdk_ready": false,
+  "action_contract": {
+    "semantics": "absolute_desired_joint_target",
+    "unit": "rad",
+    "source": "issued_robot_commands.npz:qpos at compiled joint addresses",
+    "actuator_ctrl_used_as_action": false
+  },
+  "state_contract": {
+    "source": "execute/rollout.npz:qpos at all named scalar astribot_ joint addresses",
+    "torso_joint_count": 4,
+    "native_model_order_preserved": true
+  },
+  "origin_counts": {
+    "original_clean": 92,
+    "refined": 19
+  },
+  "qualification_scopes": {
+    "original_clean": "previous_filter",
+    "refined": "strict_21_checks"
+  },
+  "previous_filter_manifest_sha256": "90434719dca23fd8c184b26fec64bee10f2394c3430aa23041b0f6bc3b587e8c",
+  "refined_snapshot_sha256": "6f682148134faeb66c0fbbabfa710b0950a30f5e3f3d84173ceeb451084f5346"
+}

@@ -1,0 +1,117 @@
+{
+  "type": "object",
+  "properties": {
+    "protocol": {
+      "const": "rssr.stage.v1"
+    },
+    "request_id": {
+      "type": "string",
+      "maxLength": 64
+    },
+    "stage": {
+      "const": "camera.observe"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "views": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "view": {
+                "enum": [
+                  "head",
+                  "left_wrist",
+                  "right_wrist"
+                ]
+              },
+              "landmarks": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "object_id": {
+                      "type": "string",
+                      "maxLength": 80
+                    },
+                    "visible": {
+                      "type": "boolean"
+                    },
+                    "center_xy_normalized": {
+                      "oneOf": [
+                        {
+                          "type": "null"
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1
+                          },
+                          "minItems": 2,
+                          "maxItems": 2
+                        }
+                      ]
+                    },
+                    "reason": {
+                      "type": "string",
+                      "maxLength": 240,
+                      "minLength": 1
+                    },
+                    "bbox_xyxy_normalized": {
+                      "oneOf": [
+                        {
+                          "type": "null"
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1
+                          },
+                          "minItems": 4,
+                          "maxItems": 4
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "object_id",
+                    "visible",
+                    "center_xy_normalized",
+                    "reason"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0,
+                "maxItems": 40
+              }
+            },
+            "required": [
+              "view",
+              "landmarks"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 3,
+          "maxItems": 3
+        }
+      },
+      "required": [
+        "views"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "protocol",
+    "request_id",
+    "stage",
+    "data"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

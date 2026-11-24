@@ -1,0 +1,203 @@
+{
+  "action_contract": {
+    "gripper": "Robotiq 2F-85 pad opening (m), 0 = close with the force limit",
+    "semantics": "absolute_desired_joint_target",
+    "unit": "rad; gripper opening m"
+  },
+  "cameras": {
+    "cam_high": "RealSense D455 on the arch behind the robot (fitted to the user frame)",
+    "cam_left_wrist": "RealSense D405, nominal 2F-85 bracket mount (not hardware-calibrated)",
+    "cam_right_wrist": "RealSense D405, nominal 2F-85 bracket mount (not hardware-calibrated)"
+  },
+  "campaign_id": "fr3_duo_gpt6luna_wrist_trajectory_refine",
+  "chunks_size": 1000,
+  "codebase_version": "v2.1",
+  "data_path": "data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet",
+  "description": "In-progress exact-source GPT-6 Luna optimization; consult release_status.json for full campaign coverage.",
+  "features": {
+    "action": {
+      "dtype": "float32",
+      "names": [
+        [
+          "left_fr3v2_joint1",
+          "left_fr3v2_joint2",
+          "left_fr3v2_joint3",
+          "left_fr3v2_joint4",
+          "left_fr3v2_joint5",
+          "left_fr3v2_joint6",
+          "left_fr3v2_joint7",
+          "left_gripper_opening_m",
+          "right_fr3v2_joint1",
+          "right_fr3v2_joint2",
+          "right_fr3v2_joint3",
+          "right_fr3v2_joint4",
+          "right_fr3v2_joint5",
+          "right_fr3v2_joint6",
+          "right_fr3v2_joint7",
+          "right_gripper_opening_m"
+        ]
+      ],
+      "shape": [
+        16
+      ]
+    },
+    "episode_index": {
+      "dtype": "int64",
+      "names": null,
+      "shape": [
+        1
+      ]
+    },
+    "frame_index": {
+      "dtype": "int64",
+      "names": null,
+      "shape": [
+        1
+      ]
+    },
+    "index": {
+      "dtype": "int64",
+      "names": null,
+      "shape": [
+        1
+      ]
+    },
+    "observation.images.cam_high": {
+      "dtype": "video",
+      "info": {
+        "has_audio": false,
+        "video.channels": 3,
+        "video.codec": "h264",
+        "video.fps": 30,
+        "video.height": 224,
+        "video.is_depth_map": false,
+        "video.pix_fmt": "yuv420p",
+        "video.width": 224
+      },
+      "names": [
+        "channels",
+        "height",
+        "width"
+      ],
+      "shape": [
+        3,
+        224,
+        224
+      ]
+    },
+    "observation.images.cam_left_wrist": {
+      "dtype": "video",
+      "info": {
+        "has_audio": false,
+        "video.channels": 3,
+        "video.codec": "h264",
+        "video.fps": 30,
+        "video.height": 224,
+        "video.is_depth_map": false,
+        "video.pix_fmt": "yuv420p",
+        "video.width": 224
+      },
+      "names": [
+        "channels",
+        "height",
+        "width"
+      ],
+      "shape": [
+        3,
+        224,
+        224
+      ]
+    },
+    "observation.images.cam_right_wrist": {
+      "dtype": "video",
+      "info": {
+        "has_audio": false,
+        "video.channels": 3,
+        "video.codec": "h264",
+        "video.fps": 30,
+        "video.height": 224,
+        "video.is_depth_map": false,
+        "video.pix_fmt": "yuv420p",
+        "video.width": 224
+      },
+      "names": [
+        "channels",
+        "height",
+        "width"
+      ],
+      "shape": [
+        3,
+        224,
+        224
+      ]
+    },
+    "observation.state": {
+      "dtype": "float32",
+      "names": [
+        [
+          "left_fr3v2_joint1",
+          "left_fr3v2_joint2",
+          "left_fr3v2_joint3",
+          "left_fr3v2_joint4",
+          "left_fr3v2_joint5",
+          "left_fr3v2_joint6",
+          "left_fr3v2_joint7",
+          "left_gripper_opening_m",
+          "right_fr3v2_joint1",
+          "right_fr3v2_joint2",
+          "right_fr3v2_joint3",
+          "right_fr3v2_joint4",
+          "right_fr3v2_joint5",
+          "right_fr3v2_joint6",
+          "right_fr3v2_joint7",
+          "right_gripper_opening_m"
+        ]
+      ],
+      "shape": [
+        16
+      ]
+    },
+    "source_case_index": {
+      "dtype": "int64",
+      "names": null,
+      "shape": [
+        1
+      ]
+    },
+    "task_index": {
+      "dtype": "int64",
+      "names": null,
+      "shape": [
+        1
+      ]
+    },
+    "timestamp": {
+      "dtype": "float32",
+      "names": null,
+      "shape": [
+        1
+      ]
+    },
+    "variation_index": {
+      "dtype": "int64",
+      "names": null,
+      "shape": [
+        1
+      ]
+    }
+  },
+  "fps": 30,
+  "maximum_episode_frames": 541,
+  "minimum_episode_frames": 384,
+  "raster_policy": "224x168 4:3 content with 28 px black bars above/below in a 224x224 canvas",
+  "robot_type": "franka_fr3_duo_robotiq_2f85",
+  "splits": {
+    "train": "0:1"
+  },
+  "total_chunks": 1,
+  "total_episodes": 1,
+  "total_frames": 519,
+  "total_tasks": 1,
+  "total_videos": 3,
+  "video_path": "videos/chunk-{episode_chunk:03d}/{video_key}/episode_{episode_index:06d}.mp4"
+}

@@ -1,0 +1,344 @@
+{
+ "schema": "rssr.fr3_duo.site_parameters.v1",
+ "frame": "franka_dual_v1.duo_site sim world: mounting point (0, 0.12, 0.775), robot facing -y, robot left = +x, metres",
+ "sources": "desk/mount/D455 from fit/d455_fit.json; pillar, plant, windows, office, cart and arch estimated from the surround video and the three camera frames; site_v5 (2026-11-04): desk, mount and D455 from the user's tape measurements, see README; site_v6 (2026-11-04): D455 at the measured place, robot placed by the head-view silhouette fit; site_v8 (2026-11-05, user: objects 15 cm farther from the desk edge, else the desk 15 cm closer): the desk (and its cloth) 0.15 m closer to the robot, everything else as site_v6",
+ "desk_top_m": 0.79,
+ "desk_centre_xy_m": [
+  0.039,
+  -0.59
+ ],
+ "desk_yaw_deg": 180.0,
+ "desk_size_m": [
+  1.4,
+  0.78
+ ],
+ "cloth_rgb": [
+  0.008,
+  0.0085,
+  0.0078
+ ],
+ "cloth_drape_m": 0.07,
+ "floor_x_m": [
+  -4.5,
+  4.5
+ ],
+ "floor_y_m": [
+  -5.5,
+  4.5
+ ],
+ "pillar_x_m": [
+  -0.55,
+  0.8
+ ],
+ "pillar_y_m": [
+  -2.5,
+  -1.3
+ ],
+ "plant_xy_m": null,
+ "window_x_m": 2.6,
+ "mullion_spacing_m": 1.2,
+ "room_x_m": [
+  -4.5,
+  2.6
+ ],
+ "room_y_m": [
+  -5.5,
+  4.5
+ ],
+ "ceiling_z_m": 2.9,
+ "led_strength": 6.0,
+ "led_strips": [
+  [
+   -3.0,
+   -4.5,
+   -3.3
+  ],
+  [
+   -3.0,
+   -3.0,
+   -1.8
+  ],
+  [
+   -3.0,
+   -1.5,
+   -0.3
+  ],
+  [
+   -3.0,
+   0.0,
+   1.2
+  ],
+  [
+   -3.0,
+   1.5,
+   2.7
+  ],
+  [
+   -1.5,
+   -4.5,
+   -3.3
+  ],
+  [
+   -1.5,
+   -3.0,
+   -1.8
+  ],
+  [
+   -1.5,
+   -1.5,
+   -0.3
+  ],
+  [
+   -1.5,
+   0.0,
+   1.2
+  ],
+  [
+   -1.5,
+   1.5,
+   2.7
+  ],
+  [
+   0.0,
+   -4.5,
+   -3.3
+  ],
+  [
+   0.0,
+   -1.2,
+   0.0
+  ],
+  [
+   0.0,
+   0.3,
+   1.5
+  ],
+  [
+   0.0,
+   1.8,
+   3.0
+  ],
+  [
+   1.5,
+   -4.5,
+   -3.3
+  ],
+  [
+   1.5,
+   -3.0,
+   -1.8
+  ],
+  [
+   1.5,
+   -1.5,
+   -0.3
+  ],
+  [
+   1.5,
+   0.0,
+   1.2
+  ],
+  [
+   1.5,
+   1.5,
+   2.7
+  ]
+ ],
+ "office_desks": [
+  [
+   1.7,
+   1.9,
+   1.4,
+   0.7
+  ],
+  [
+   1.7,
+   3.3,
+   1.4,
+   0.7
+  ],
+  [
+   -0.7,
+   2.6,
+   1.4,
+   0.7
+  ],
+  [
+   -2.3,
+   2.6,
+   1.4,
+   0.7
+  ],
+  [
+   -3.0,
+   -0.4,
+   1.4,
+   0.7
+  ],
+  [
+   -3.0,
+   1.0,
+   1.4,
+   0.7
+  ]
+ ],
+ "sofa_xy_m": [
+  1.15,
+  0.85
+ ],
+ "workbench_xy_m": [
+  0.95,
+  0.85
+ ],
+ "mount_world_m": [
+  0.0316,
+  0.3216,
+  1.0067
+ ],
+ "cart_x_m": [
+  0.12,
+  -0.42
+ ],
+ "cart_halfwidth_m": 0.25,
+ "arch_x_m": -0.0054,
+ "arch_radius_m": 0.42,
+ "d455_mount_m": [
+  0.0316,
+  -0.0224,
+  0.7333
+ ],
+ "lights": [
+  [
+   "Site / ceiling panel over desk",
+   [
+    0.0,
+    -0.65,
+    2.85
+   ],
+   [
+    0.0,
+    -0.65,
+    0.75
+   ],
+   160.0,
+   [
+    2.4,
+    0.6
+   ]
+  ],
+  [
+   "Site / ceiling panel over robot",
+   [
+    0.0,
+    0.6,
+    2.85
+   ],
+   [
+    0.0,
+    0.4,
+    0.8
+   ],
+   110.0,
+   [
+    2.4,
+    0.6
+   ]
+  ],
+  [
+   "Site / ceiling panel right",
+   [
+    -1.8,
+    -0.6,
+    2.85
+   ],
+   [
+    -1.8,
+    -0.6,
+    0.0
+   ],
+   120.0,
+   [
+    2.4,
+    0.6
+   ]
+  ],
+  [
+   "Site / ceiling panel left",
+   [
+    1.8,
+    -0.6,
+    2.85
+   ],
+   [
+    1.8,
+    -0.6,
+    0.0
+   ],
+   120.0,
+   [
+    2.4,
+    0.6
+   ]
+  ],
+  [
+   "Site / window side fill",
+   [
+    2.3,
+    -0.5,
+    1.6
+   ],
+   [
+    0.0,
+    -0.6,
+    0.8
+   ],
+   30.0,
+   [
+    1.5,
+    1.0
+   ]
+  ]
+ ],
+ "world_strength": 0.05,
+ "exposure_ev": 0.0,
+ "cloth_sheen": 0.05,
+ "carpet_rgb_scale": [
+  0.5,
+  0.56,
+  0.5
+ ],
+ "cloth_specular": 0.1,
+ "floor_boxes": [
+  [
+   "black floor cabinet left of the desk",
+   [
+    0.86,
+    -0.56,
+    0.0
+   ],
+   [
+    1.12,
+    -0.2,
+    0.45
+   ]
+  ]
+ ],
+ "plant_note": "site_v3 had a potted plant on a red bin at (-0.85, -1.15); removed in site_v4: the user (2026-11-04) marked it as clutter not in the D455 frame",
+ "desk_model_scale_xy": [
+  1.1666666666666667,
+  1.3
+ ],
+ "site_v5_note": "desk = S1 sim desk 1.4 x 0.78 m, top 0.79 m (user); FR3 Duo mount on the 0.77 m tray, mounting point 0.0308 m above the mount bottom (URDF collision mesh) = 0.8008 m; mounting point 0.60 m behind the desk near edge, so that the measured start pose puts both grippers mid-desk (user: start-pose end effector about the middle of the desk); D455 1.74 m high and 0.64 m from the desk near edge (user), arch 3.7 cm behind it as in site_v4; desk near edge kept at y -0.35 so the room and the inspection cameras keep their place",
+ "cart_top_z_m": 0.77,
+ "riser_mount_frame_m": [
+  [
+   -0.11,
+   0.11
+  ],
+  [
+   -0.14,
+   0.14
+  ]
+ ],
+ "site_v6_note": "D455 1.74 m high, 0.64 m behind the desk near edge (user), aim fitted to the desk corners in the real D455 frame (d455_fit_v6.json); robot (URDF fr3_duo_mount_v0_3 angles kept, yaw 0.00 deg ignored) placed by silhouette fit to that frame (silhouette_fit.json urdf_mount_angles, IoU 0.853): mounting point (0.032, 0.322, 1.007) m, 0.672 m behind the desk near edge, 0.237 m above the 0.77 m tray top; the frame between tray and mount is unknown and drawn as a placeholder aluminium block"
+}

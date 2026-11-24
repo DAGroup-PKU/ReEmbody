@@ -1,0 +1,199 @@
+{
+  "schema": "rssr.fr3_duo.controller_runtime_context.v1",
+  "provenance": "Read-only extraction from current runtime; no controller strategy authored or physics run",
+  "module_contract": {
+    "required": "def run(S): ... ; ordinary complete Python module",
+    "recommended": "def grasps(S): return [(hand, object_id), ...]; OPTIONS dict allowed and run_one may merge overrides",
+    "entrypoint": "franka_dual_v1.duo_run.run_one(Path(controller), DS.Variation.from_json(variation_dict), Path(fresh_out), view=True, save_episode=True, options=None)",
+    "state": {
+      "S.m": "MuJoCo model, read-only",
+      "S.d": "actual live measured MjData, read-only",
+      "S.objects": "object specs keyed by object ID",
+      "S.bindings": "task role bindings",
+      "S.allow": "per-hand object-contact permission sets used for planning",
+      "S.home": "per-hand nominal joint vectors",
+      "S.place": "deployment geometry placement",
+      "S.robot.arms[h]": "qadr,dadr,lo,hi,tcp,wrist_cam model IDs",
+      "S.attached": "planner-only held-object attachment references; use attach/detach"
+    },
+    "execution": "Use S.together for newly authored joint plans so its existing path collision checks run. S.line uses orientation SLERP, which alone does not guarantee continuous gaze. Camera tracking can be authored in the new controller; the runtime has no built-in continuously targeted-camera primitive.",
+    "safety": "Do not monkeypatch runtime classes, change gates/constants/scene/camera mounts, or write live qpos/qvel/ctrl/forces. Only a separate MjData copy may be used for kinematics. End with the original full task success; no skipped source episodes or alternate initial states."
+  },
+  "timing": {
+    "control_Hz": 30,
+    "physics_Hz": 1200,
+    "joint_command_step_max_rad": 0.025,
+    "reported_duration_s": "number of issued 30 Hz actions / 30",
+    "runtime_independent_final_settle_s": 2.0,
+    "note": "finish() simulates an additional 2 s after issuing the action sequence; duration_s excludes this independent verification settle. Declare exactly which clock is bounded by 20 s."
+  },
+  "session_public_methods": [
+    {
+      "name": "pose",
+      "signature": "def pose(self, body)",
+      "doc": null
+    },
+    {
+      "name": "q",
+      "signature": "def q(self, hand)",
+      "doc": null
+    },
+    {
+      "name": "q_cmd",
+      "signature": "def q_cmd(self, hand)",
+      "doc": null
+    },
+    {
+      "name": "tcp",
+      "signature": "def tcp(self, hand)",
+      "doc": null
+    },
+    {
+      "name": "width",
+      "signature": "def width(self, hand)",
+      "doc": null
+    },
+    {
+      "name": "slide",
+      "signature": "def slide(self, joint)",
+      "doc": null
+    },
+    {
+      "name": "contacts",
+      "signature": "def contacts(self, hand, body)",
+      "doc": "(left side, right side) finger contact with the body now."
+    },
+    {
+      "name": "t",
+      "signature": "def t(self)",
+      "doc": null
+    },
+    {
+      "name": "note",
+      "signature": "def note(self, text)",
+      "doc": null
+    },
+    {
+      "name": "fk",
+      "signature": "def fk(self, hand, q)",
+      "doc": null
+    },
+    {
+      "name": "attach",
+      "signature": "def attach(self, hand, obj)",
+      "doc": "From now on, plan checks carry obj with the hand at its currently measured pose relative to the TCP."
+    },
+    {
+      "name": "detach",
+      "signature": "def detach(self, hand)",
+      "doc": null
+    },
+    {
+      "name": "check",
+      "signature": "def check(self, qs, allow=None)",
+      "doc": null
+    },
+    {
+      "name": "ok",
+      "signature": "def ok(self, env, arm, jm)",
+      "doc": null
+    },
+    {
+      "name": "ik",
+      "signature": "def ik(self, hand, pos, rots, near=None, n_seeds=24, other=None)",
+      "doc": "Collision-free IK solution for any of the rotations; returns (q, R) closest to `near` (default: the\ncommanded joints), or raises PlanError with the reasons."
+    },
+    {
+      "name": "ik_many",
+      "signature": "def ik_many(self, hand, pos, rots, near=None, n_seeds=24, other=None, k=4)",
+      "doc": "Up to k distinct (> 0.2 rad apart) collision-free IK solutions [(q, R)], closest to `near` first."
+    },
+    {
+      "name": "ik_local_soft",
+      "signature": "def ik_local_soft(self, hand, pos, rot, q_init, q_post, soft_axis, iters=40, damping=0.02, null_gain=0.1, max_iter_step=0.05, margin=0.03)",
+      "doc": "Local damped least squares like robot.ik_local, with the rotation about the world axis `soft_axis` weighted\nSOFT_W (the hand may turn about it). Returns (q, pos err m, rot err deg about the other axes, deg about it)."
+    },
+    {
+      "name": "move_joints",
+      "signature": "def move_joints(self, targets, label, v_max=V_MAX, allow=None)",
+      "doc": null
+    },
+    {
+      "name": "plan_line",
+      "signature": "def plan_line(self, goals, speed=0.1, min_s=0.5, allow=None, start=None, check=True, label='line', soft=None)",
+      "doc": "Joint plans {hand: (n, 7)} for straight TCP lines to goals {hand: (pos, R)} from `start` joints (default: the\ncommanded joints), executed together; raises PlanError. Nothing is executed. soft: {hand: world axis} about\nwhich that hand may turn (up to SOFT_TOL_DEG) to stay reachable."
+    },
+    {
+      "name": "line",
+      "signature": "def line(self, goals, label, speed=0.1, min_s=0.5, allow=None, check=True, soft=None)",
+      "doc": "goals: {hand: (pos, R)}. Straight TCP lines from the commanded TCP poses, executed together."
+    },
+    {
+      "name": "joint_plan",
+      "signature": "def joint_plan(self, hand, q, v_max=V_MAX, start=None)",
+      "doc": "Half-cosine joint plan (n, 7) of one arm from `start` (default: its commanded joints) to q; nothing is\nexecuted or checked."
+    },
+    {
+      "name": "together",
+      "signature": "def together(self, plans, label, grips=None, allow=None, delay=None)",
+      "doc": "Execute per-hand joint plans {hand: (n, 7)} at the same time; a hand whose plan ends first holds its last\ntarget, delay {hand: s} starts that hand's plan later. grips {hand: width} ramps the gripper over the first\n0.4 s. The two arms' joint path is checked together first; raises PlanError (nothing executed)."
+    },
+    {
+      "name": "run_plans",
+      "signature": "def run_plans(self, plans, label)",
+      "doc": "Execute joint plans made by plan_line (one after the other, in order)."
+    },
+    {
+      "name": "grip",
+      "signature": "def grip(self, widths, label, duration=0.6)",
+      "doc": null
+    },
+    {
+      "name": "hold",
+      "signature": "def hold(self, duration, label)",
+      "doc": null
+    }
+  ],
+  "robot_kinematics_methods": [
+    {
+      "name": "S.robot.fk",
+      "signature": "def fk(self, hand, q, base_qpos)",
+      "doc": null
+    },
+    {
+      "name": "S.robot.ik",
+      "signature": "def ik(self, hand, pos, rot, q_init, base_qpos, q_ref=None, rot_weight=0.1, reg=0.0003, margin=LIMIT_MARGIN, posture=None)",
+      "doc": "Bounded IK for the TCP pose. Returns (q, pos_err_m, rot_err_deg).\nposture: {joint index: (value, weight)} extra residuals that pin the redundant (elbow swivel) direction."
+    },
+    {
+      "name": "S.robot.ik_local",
+      "signature": "def ik_local(self, hand, pos, rot, q_init, base_qpos, q_post, rot_weight=0.3, damping=0.02, null_gain=0.1, iters=12, max_iter_step=0.05, margin=LIMIT_MARGIN, tol_m=0.0001, tol_rad=0.001, null_mask=None, limit_zone=0.0, limit_gain=0.0)",
+      "doc": "Local damped-least-squares IK from q_init (continuous: never jumps to another solution branch).\nEach iteration: dq = J^T (J J^T + damping^2 I)^-1 e + null_gain * (I - J^+ J)(q_post - q), clipped to\nmax_iter_step and to the joint limits minus `margin`. Returns (q, pos_err_m, rot_err_deg)."
+    }
+  ],
+  "critical_runtime_source": {
+    "plan_line": "def plan_line(self, goals, speed=0.10, min_s=0.5, allow=None, start=None, check=True, label='line', soft=None):\n        \"\"\"Joint plans {hand: (n, 7)} for straight TCP lines to goals {hand: (pos, R)} from `start` joints (default: the\n        commanded joints), executed together; raises PlanError. Nothing is executed. soft: {hand: world axis} about\n        which that hand may turn (up to SOFT_TOL_DEG) to stay reachable.\"\"\"\n        start = start or {}\n        q0 = {h: np.asarray(start.get(h, self.q_cmd(h)), float) for h in HANDS}\n        n = 0\n        starts = {}\n        for h, (p, R) in goals.items():\n            p0, R0 = self.fk(h, q0[h])\n            starts[h] = (p0, R0)\n            ang = Rotation.from_matrix(np.asarray(R) @ R0.T).magnitude()\n            T = max(min_s, np.linalg.norm(np.asarray(p) - p0) / speed, ang / 0.6)\n            n = max(n, int(np.ceil(T * FPS)))\n        n_nominal = n\n        for _ in range(4):\n            if n > max(3 * n_nominal, n_nominal + 3 * FPS):\n                raise PlanError(f'{label}: line would need {n / FPS:.1f} s (nominal {n_nominal / FPS:.1f} s): it passes '\n                                'near a singularity or a joint limit')\n            plans, worst_step = {}, 0.0\n            for h, (p, R) in goals.items():\n                p0, R0 = starts[h]\n                s = _hc(n)\n                slerp = Slerp([0, 1], Rotation.from_matrix([R0, np.asarray(R)]))\n                q = q0[h].copy()\n                post = q.copy()\n                out = np.zeros((n, 7))\n                for k in range(n):\n                    pk = p0 + s[k] * (np.asarray(p) - p0)\n                    Rk = slerp([s[k]]).as_matrix()[0]\n                    if soft and h in soft:\n                        qn, pe, re, about = self.ik_local_soft(h, pk, Rk, q, post, soft[h])\n                        if pe > LINE_POS_TOL or re > IK_ROT_TOL or about > SOFT_TOL_DEG:\n                            raise PlanError(f'{label}: {h} line leaves the reachable set at {k / n:.0%} '\n                                            f'({pe * 1000:.1f} mm, {re:.1f} deg, {about:.0f} deg about the soft axis)')\n                        worst_step = max(worst_step, float(np.abs(qn - q).max()))\n                        out[k] = q = qn\n                        continue\n                    qn, pe, re = self.robot.ik_local(h, pk, Rk, q, self.d.qpos, post, iters=30)\n                    if pe > LINE_POS_TOL or re > IK_ROT_TOL:\n                        # near a joint limit the damped step stalls: bounded least squares from the same joints\n                        qs, pe2, re2 = self.ik_solver.solve(h, pk, Rk, [q])\n                        if pe2 <= LINE_POS_TOL and re2 <= IK_ROT_TOL and np.abs(qs - q).max() <= 4 * STEP_MAX:\n                            qn, pe, re = qs, pe2, re2\n                    if pe > LINE_POS_TOL or re > IK_ROT_TOL:\n                        raise PlanError(f'{label}: {h} line leaves the reachable set at {k / n:.0%} '\n                                        f'({pe * 1000:.1f} mm, {re:.1f} deg)')\n                    worst_step = max(worst_step, float(np.abs(qn - q).max()))\n                    out[k] = q = qn\n                plans[h] = out\n            if worst_step <= STEP_MAX:\n                break\n            n = int(np.ceil(n * worst_step / STEP_MAX * 1.1))\n        if check:\n            ok, info = self._path_ok(plans, allow, others={h: q0[h] for h in HANDS if h not in goals})\n            if not ok:\n                raise PlanError(f'{label}: line not clear: {info}')\n        return plans",
+    "together": "def together(self, plans, label, grips=None, allow=None, delay=None):\n        \"\"\"Execute per-hand joint plans {hand: (n, 7)} at the same time; a hand whose plan ends first holds its last\n        target, delay {hand: s} starts that hand's plan later. grips {hand: width} ramps the gripper over the first\n        0.4 s. The two arms' joint path is checked together first; raises PlanError (nothing executed).\"\"\"\n        plans = {h: np.asarray(p, float) for h, p in plans.items() if len(p)}\n        for h, s in (delay or {}).items():\n            if h in plans and s > 0:\n                plans[h] = np.r_[np.repeat(self.q_cmd(h)[None], int(round(s * FPS)), 0), plans[h]]\n        if not plans:\n            return\n        ok, info = self._path_ok(plans, allow)\n        if not ok:\n            raise PlanError(f'{label}: arms not clear together: {info}')\n        g = None\n        if grips:\n            n = int(np.ceil(0.4 * FPS))\n            g = {h: self.prev[8 * HANDS.index(h) + 7] + _hc(n) * (w - self.prev[8 * HANDS.index(h) + 7])\n                 for h, w in grips.items()}\n        self._execute(plans, label, g)",
+    "_path_ok": "def _path_ok(self, plan, allow=None, others=None):\n        n = max(len(p) for p in plan.values())\n        worst = None\n        for k in range(0, n, 2):\n            qs = {h: (plan[h][min(k, len(plan[h]) - 1)] if h in plan else\n                      (others or {}).get(h, self.q_cmd(h))) for h in HANDS}\n            env, arm, jm = self.check(qs, allow)\n            if not self.ok(env, arm, jm):\n                return False, dict(t=round(k / FPS, 2), env=env, arm=arm, joint_margin=round(jm, 3))\n        return True, worst",
+    "_joint_segment": "def _joint_segment(self, qa, qb, v_max=V_MAX, min_s=0.6):\n        dq = float(np.abs(qb - qa).max())\n        T = max(min_s, np.pi / 2 * dq / v_max)\n        n = max(1, int(np.ceil(T * FPS)))\n        return qa + _hc(n)[:, None] * (qb - qa)"
+  },
+  "camera_convention": {
+    "names": [
+      "left_wrist",
+      "right_wrist"
+    ],
+    "optical_forward_world": "-d.cam_xmat[cam_id].reshape(3,3)[:,2]",
+    "position_world": "d.cam_xpos[cam_id]",
+    "tcp_axes": "z approach, y closing",
+    "nominal_mount_source": "ROBOTIQ_XML = Path('third_party/mujoco_menagerie/robotiq_2f85/2f85.xml')\n# Gripper mounting: GRIPPER_YAW / FACTORY_* above, per DuoPlacement. Wrist camera (RealSense D405, 1280x720, ~87 x 58\n# deg): NOMINAL mount, 7.5 cm off the gripper axis on the gripper's +x side, 3 cm in front of the flange, aimed at the\n# pinch point; the real holder pose is what the photographs are for.\nWRIST_CAM_IN_GRIPPER = np.array([0.075, 0.0, 0.03])\nD405_FOVY_DEG = 58.0\n                            pos=[0, 0, h / 2], contype=0, conaffinity=0, group=2, rgba=[0.1, 0.1, 0.1, 1])\n        base = spec.body(f'{hand}_g_base')\n        pinch = np.array([0.0, 0.0, 0.145])\n        base.add_site(name=f'{hand}_tcp', pos=pinch)\n        cam_pos = WRIST_CAM_IN_GRIPPER - np.array([0.0, 0.0, 0.0038])  # base frame is 3.8 mm past base_mount\n        z = cam_pos - pinch  # camera looks along -z: from the camera toward the pinch point\n        z /= np.linalg.norm(z)\n        x = np.cross([0.0, 1.0, 0.0], z)\n        x /= np.linalg.norm(x)\n        cam = base.add_camera(name=f'{hand}_wrist', pos=cam_pos, fovy=D405_FOVY_DEG)\n        cam.alt.type = mujoco.mjtOrientation.mjORIENTATION_XYAXES\n        cam.alt.xyaxes = list(np.r_[x, np.cross(z, x)])",
+    "caution": "Read the actual built model for wrist extrinsics; old Panda look_at assumes optical axis parallel to TCP approach and uses a different mount; it is not the FR3 D405 geometry."
+  },
+  "file_pins": {
+    "stages/02_sim1_to_sim2/franka_dual_v1/duo_run.py": "eda1f45574c73f49a33e2f5188e59b9345246ab6c24db9450b17d50aaaf52218",
+    "stages/02_sim1_to_sim2/franka_dual_v1/duo_robot.py": "1a9e4a70ab6f1477fe5088db87f2fd73b01f1495af5fc92df2bc4e010a8159be",
+    "stages/02_sim1_to_sim2/franka_dual_v1/robot.py": "d0192009f2e573507c8b48ab5cd8cbb6c7cce7978494353e0777f9d44545d170",
+    "stages/02_sim1_to_sim2/franka_dual_v1/fr3_duo.py": "7d1476260211795cf0ad8739e0bee3c62ce7a5b962178d1f5ac0646a8ccba323",
+    "stages/02_sim1_to_sim2/franka_dual_v1/duo_scene.py": "d78aa72989f6d6b64d7d2eac40fe3e6782e62d3e24cce90c6d54a9598a69568c",
+    "stages/02_sim1_to_sim2/franka_dual_v1/duo_site.py": "66604d0e469023c978bc93d8a1a02f46cdd58acfee4c9f9eb0d5b6c652bf3d2d"
+  }
+}

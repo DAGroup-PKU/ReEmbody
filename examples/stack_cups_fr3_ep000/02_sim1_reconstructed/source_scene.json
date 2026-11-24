@@ -1,0 +1,119 @@
+{
+  "schema": "rssr.scene.v2",
+  "task_id": "dm7",
+  "objects": [
+    {
+      "id": "cup_left_base",
+      "shape": "cup",
+      "role": "object",
+      "color": "brown",
+      "position_m": [
+        0.1963336594375093,
+        -0.7529925495254548,
+        0.7928
+      ],
+      "size_m": [
+        0.075,
+        0.075,
+        0.085
+      ],
+      "yaw_rad": -0.04,
+      "rgba": [
+        0.56,
+        0.38,
+        0.19,
+        1.0
+      ],
+      "mobility": "free",
+      "parent_id": null,
+      "support_id": "table",
+      "head_center": [
+        0.18,
+        0.55
+      ],
+      "evidence": "Real1 head first frame: left kraft paper cup; larger lower collision shell approximates taper for nesting.",
+      "mass_kg": 0.06,
+      "wall_m": 0.003
+    },
+    {
+      "id": "cup_right_upper",
+      "shape": "cup",
+      "role": "object",
+      "color": "brown",
+      "position_m": [
+        -0.3259456575628127,
+        -0.695916436656433,
+        0.7928
+      ],
+      "size_m": [
+        0.0585,
+        0.0585,
+        0.085
+      ],
+      "yaw_rad": 0.05,
+      "rgba": [
+        0.56,
+        0.38,
+        0.19,
+        1.0
+      ],
+      "mobility": "free",
+      "parent_id": null,
+      "support_id": "table",
+      "head_center": [
+        0.84,
+        0.55
+      ],
+      "evidence": "Real1 head first frame: right kraft paper cup; smaller upper collision shell approximates taper for nesting.",
+      "mass_kg": 0.06,
+      "wall_m": 0.003
+    },
+    {
+      "id": "stack_region",
+      "shape": "region",
+      "role": "target_region",
+      "color": "black",
+      "position_m": [
+        -0.03579028955704534,
+        -0.6802719546595195,
+        0.7517999999999999
+      ],
+      "size_m": [
+        0.18,
+        0.16,
+        0.003
+      ],
+      "yaw_rad": 0.0,
+      "rgba": [
+        0.05,
+        0.05,
+        0.05,
+        0.35
+      ],
+      "mobility": "static",
+      "parent_id": null,
+      "support_id": "table",
+      "head_center": [
+        0.516,
+        0.608
+      ],
+      "evidence": "Explicit engineered prototype from observed Real1 identity and source FK; approximate geometry, not metric reconstruction.",
+      "mass_kg": 0.001
+    }
+  ],
+  "bindings": {
+    "targets": [
+      "cup_left_base",
+      "cup_right_upper"
+    ],
+    "containers": [],
+    "excluded": [],
+    "particles": [],
+    "target_region": "stack_region",
+    "articulation": null,
+    "stack_hands": {
+      "base": "left",
+      "upper": "right"
+    }
+  }
+}

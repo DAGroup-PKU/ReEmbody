@@ -1,0 +1,5 @@
+# Stage 4 (Rendering): Blender Cycles headless three-view rendering
+# Tested on Python 3.11.15 with Blender 4.5.14 LTS (`bpy`) + system `ffmpeg` (libx264)
+bpy==4.5.14
+numpy>=1.26,<2.0
+Pillow>=10.0

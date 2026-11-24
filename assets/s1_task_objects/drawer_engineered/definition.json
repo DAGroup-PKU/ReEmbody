@@ -1,0 +1,476 @@
+{
+  "allow_instance_fields": [
+    "position_m",
+    "yaw_rad",
+    "roll_pitch_rad"
+  ],
+  "anchors": [
+    {
+      "hand": "right",
+      "handle": "bottom_handle_bar",
+      "mode": "handle",
+      "object": "drawer_cabinet"
+    },
+    {
+      "hand": "left",
+      "mode": "center",
+      "object": "red_block"
+    }
+  ],
+  "articulation_limit_solver": {
+    "solimplimit": [
+      0.999,
+      0.9999,
+      0.001
+    ],
+    "solreflimit": [
+      0.0021,
+      1.0
+    ]
+  },
+  "box_collision": {
+    "worktable": "convex"
+  },
+  "cabinet_open_face": "+y",
+  "engineering_changes": [
+    "Drawer opens toward +Y as recorded by source FK; cabinet open face and handle aligned.",
+    "RSSR Cobot task asset v1: approximate tabletop scene initialized from the Real1 first frame and EEF/action trajectory; geometry is frozen for this run.",
+    "Original dataset task text: Put_the_block_in_the_drawer.",
+    "Visual object identity and base/upper order audited from Real1 head first/last frames; initial metric layout remains approximate and is re-centered from immutable action during Sim2 bootstrap.",
+    "Source EEF IK replay; scene anchors follow true source FK. Drawer hand roles verified against synchronized Real1 wrist videos.",
+    "Real1 four-level cabinet: add fixed lowest front and handle below the task-active slide.",
+    "2026-10-28 user correction: 35x35cm front, 26.5cm depth, pink 5cm block, and separate 140x78cm centred table contract; fresh physical success and exact replay remain required.",
+    "2026-10-28 photo correction: four equal 8.75 cm tiers, each handle centred on its drawer face inside the 35 cm cabinet. All scene bindings and slide limits retained; native success unproven.",
+    "2026-10-29: initial 5 cm cube is upright with zero table-plane yaw; all 200 native grasp and task-success results must be revalidated.",
+    "2026-11-01: centred layout - cabinet centre on the robot forward axis, block disk left of centre between cabinet and robot; right hand opens/closes the third drawer from the top, left hand places the block. Native success must be revalidated."
+  ],
+  "grasp_depth_m": 0.018,
+  "release_goals": [],
+  "round_contact_model": {
+    "calibrated": false,
+    "radius_ratio": 0.01,
+    "revision": "radius_scaled_round_rolling_v1"
+  },
+  "round_table_dispatch": "round_analytic_table_dispatch_v1",
+  "scene": {
+    "bindings": {
+      "articulation": "bottom_drawer_slide",
+      "containers": [
+        "bottom_drawer"
+      ],
+      "excluded": [],
+      "particles": [],
+      "target_region": null,
+      "targets": [
+        "red_block"
+      ]
+    },
+    "objects": [
+      {
+        "color": "gray",
+        "evidence": "User-measured 35 cm front width/height and 26.5 cm depth; four-level source hierarchy transformed proportionally for fresh native validation.",
+        "head_center": [
+          0.72,
+          0.36
+        ],
+        "id": "drawer_cabinet",
+        "mass_kg": 1.0,
+        "mobility": "static",
+        "parent_id": null,
+        "position_m": [
+          -0.006000000000000005,
+          -0.749642857142857,
+          0.9753000000000001
+        ],
+        "rgba": [
+          0.58,
+          0.6,
+          0.57,
+          1.0
+        ],
+        "role": "fixture",
+        "shape": "cabinet",
+        "size_m": [
+          0.35,
+          0.265,
+          0.35
+        ],
+        "support_id": "table",
+        "wall_m": 0.012,
+        "yaw_rad": 0.0
+      },
+      {
+        "color": "gray",
+        "evidence": "Photo-aligned four equal 8.75 cm drawer tiers within the user-measured 35 cm cabinet; handle centred on its tier. Original object identity and task articulation retained. Fresh native contact and task validation required.",
+        "head_center": [
+          0.38,
+          0.38
+        ],
+        "id": "bottom_drawer",
+        "joint": {
+          "anchor_in_object_m": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "name": "bottom_drawer_slide",
+          "range": [
+            0,
+            0.17
+          ],
+          "type": "slide"
+        },
+        "mass_kg": 0.12,
+        "mobility": "slide",
+        "parent_id": "drawer_cabinet",
+        "position_m": [
+          -0.006000000000000005,
+          -0.72125,
+          0.93155
+        ],
+        "rgba": [
+          0.55,
+          0.57,
+          0.54,
+          1.0
+        ],
+        "role": "container",
+        "shape": "open_box",
+        "size_m": [
+          0.31181818181818177,
+          0.2082142857142857,
+          0.07218118020200094
+        ],
+        "support_id": "drawer_cabinet",
+        "wall_m": 0.01,
+        "yaw_rad": 0.0
+      },
+      {
+        "color": "gray",
+        "evidence": "Photo-aligned four equal 8.75 cm drawer tiers within the user-measured 35 cm cabinet; handle centred on its tier. Original object identity and task articulation retained. Fresh native contact and task validation required.",
+        "head_center": [
+          0.38,
+          0.385
+        ],
+        "id": "bottom_handle_bar",
+        "mass_kg": 0.04,
+        "mobility": "static",
+        "parent_id": "bottom_drawer",
+        "position_m": [
+          -0.006000000000000005,
+          -0.6029464285714285,
+          0.93155
+        ],
+        "rgba": [
+          0.68,
+          0.7,
+          0.67,
+          1.0
+        ],
+        "role": "fixture",
+        "shape": "box",
+        "size_m": [
+          0.08272727272727272,
+          0.024607142857142855,
+          0.015639255710433536
+        ],
+        "support_id": "bottom_drawer",
+        "yaw_rad": 0.0
+      },
+      {
+        "color": "gray",
+        "evidence": "Photo-aligned four equal 8.75 cm drawer tiers within the user-measured 35 cm cabinet; handle centred on its tier. Original object identity and task articulation retained. Fresh native contact and task validation required.",
+        "head_center": [
+          0.34,
+          0.385
+        ],
+        "id": "bottom_handle_post_a",
+        "mass_kg": 0.04,
+        "mobility": "static",
+        "parent_id": "bottom_drawer",
+        "position_m": [
+          -0.04099999999999998,
+          -0.6143035714285714,
+          0.93155
+        ],
+        "rgba": [
+          0.68,
+          0.7,
+          0.67,
+          1.0
+        ],
+        "role": "fixture",
+        "shape": "box",
+        "size_m": [
+          0.011454545454545452,
+          0.023660714285714285,
+          0.015037745875416864
+        ],
+        "support_id": "bottom_drawer",
+        "yaw_rad": 0.0
+      },
+      {
+        "color": "gray",
+        "evidence": "Photo-aligned four equal 8.75 cm drawer tiers within the user-measured 35 cm cabinet; handle centred on its tier. Original object identity and task articulation retained. Fresh native contact and task validation required.",
+        "head_center": [
+          0.42,
+          0.385
+        ],
+        "id": "bottom_handle_post_b",
+        "mass_kg": 0.04,
+        "mobility": "static",
+        "parent_id": "bottom_drawer",
+        "position_m": [
+          0.02899999999999997,
+          -0.6143035714285714,
+          0.93155
+        ],
+        "rgba": [
+          0.68,
+          0.7,
+          0.67,
+          1.0
+        ],
+        "role": "fixture",
+        "shape": "box",
+        "size_m": [
+          0.011454545454545452,
+          0.023660714285714285,
+          0.015037745875416864
+        ],
+        "support_id": "bottom_drawer",
+        "yaw_rad": 0.0
+      },
+      {
+        "color": "gray",
+        "evidence": "Photo-aligned four equal 8.75 cm drawer tiers within the user-measured 35 cm cabinet; handle centred on its tier. Original object identity and task articulation retained. Fresh native contact and task validation required.",
+        "head_center": [
+          0.38,
+          0.285
+        ],
+        "id": "middle_drawer_front",
+        "mass_kg": 0.04,
+        "mobility": "static",
+        "parent_id": "drawer_cabinet",
+        "position_m": [
+          -0.006000000000000005,
+          -0.6105178571428571,
+          1.01905
+        ],
+        "rgba": [
+          0.56,
+          0.58,
+          0.55,
+          1.0
+        ],
+        "role": "fixture",
+        "shape": "box",
+        "size_m": [
+          0.31181818181818177,
+          0.017035714285714283,
+          0.07218118020200094
+        ],
+        "support_id": "drawer_cabinet",
+        "yaw_rad": 0.0
+      },
+      {
+        "color": "gray",
+        "evidence": "Photo-aligned four equal 8.75 cm drawer tiers within the user-measured 35 cm cabinet; handle centred on its tier. Original object identity and task articulation retained. Fresh native contact and task validation required.",
+        "head_center": [
+          0.38,
+          0.27
+        ],
+        "id": "middle_handle",
+        "mass_kg": 0.04,
+        "mobility": "static",
+        "parent_id": "drawer_cabinet",
+        "position_m": [
+          -0.006000000000000005,
+          -0.5906428571428571,
+          1.01905
+        ],
+        "rgba": [
+          0.68,
+          0.7,
+          0.67,
+          1.0
+        ],
+        "role": "fixture",
+        "shape": "box",
+        "size_m": [
+          0.08272727272727272,
+          0.017035714285714283,
+          0.010827177030300141
+        ],
+        "support_id": "drawer_cabinet",
+        "yaw_rad": 0.0
+      },
+      {
+        "color": "gray",
+        "evidence": "Photo-aligned four equal 8.75 cm drawer tiers within the user-measured 35 cm cabinet; handle centred on its tier. Original object identity and task articulation retained. Fresh native contact and task validation required.",
+        "head_center": [
+          0.38,
+          0.13
+        ],
+        "id": "top_drawer_front",
+        "mass_kg": 0.04,
+        "mobility": "static",
+        "parent_id": "drawer_cabinet",
+        "position_m": [
+          -0.006000000000000005,
+          -0.6105178571428571,
+          1.10655
+        ],
+        "rgba": [
+          0.56,
+          0.58,
+          0.55,
+          1.0
+        ],
+        "role": "fixture",
+        "shape": "box",
+        "size_m": [
+          0.31181818181818177,
+          0.017035714285714283,
+          0.07218118020200094
+        ],
+        "support_id": "drawer_cabinet",
+        "yaw_rad": 0.0
+      },
+      {
+        "color": "gray",
+        "evidence": "Photo-aligned four equal 8.75 cm drawer tiers within the user-measured 35 cm cabinet; handle centred on its tier. Original object identity and task articulation retained. Fresh native contact and task validation required.",
+        "head_center": [
+          0.38,
+          0.09
+        ],
+        "id": "top_handle",
+        "mass_kg": 0.04,
+        "mobility": "static",
+        "parent_id": "drawer_cabinet",
+        "position_m": [
+          -0.006000000000000005,
+          -0.5906428571428571,
+          1.10655
+        ],
+        "rgba": [
+          0.68,
+          0.7,
+          0.67,
+          1.0
+        ],
+        "role": "fixture",
+        "shape": "box",
+        "size_m": [
+          0.08272727272727272,
+          0.017035714285714283,
+          0.010827177030300141
+        ],
+        "support_id": "drawer_cabinet",
+        "yaw_rad": 0.0
+      },
+      {
+        "color": "red",
+        "evidence": "5 cm pink foam cube, upright with edges parallel to the table, sampled in the centred-layout disk between the cabinet and the robot, left of the centre line.",
+        "head_center": [
+          0.077,
+          0.53
+        ],
+        "id": "red_block",
+        "mass_kg": 0.04,
+        "mobility": "free",
+        "parent_id": null,
+        "position_m": [
+          0.22585786437626904,
+          -0.43550510257216823,
+          0.8253
+        ],
+        "rgba": [
+          0.52,
+          0.16,
+          0.22,
+          1.0
+        ],
+        "role": "object",
+        "shape": "box",
+        "size_m": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "support_id": "table",
+        "yaw_rad": 0.0
+      },
+      {
+        "color": "gray",
+        "evidence": "Photo-aligned four equal 8.75 cm drawer tiers within the user-measured 35 cm cabinet; handle centred on its tier. Original object identity and task articulation retained. Fresh native contact and task validation required.",
+        "head_center": null,
+        "id": "lowest_drawer_front",
+        "mass_kg": 0.04,
+        "mobility": "static",
+        "parent_id": "drawer_cabinet",
+        "position_m": [
+          -0.006000000000000005,
+          -0.6105178571428571,
+          0.84405
+        ],
+        "rgba": [
+          0.56,
+          0.58,
+          0.55,
+          1.0
+        ],
+        "role": "fixture",
+        "shape": "box",
+        "size_m": [
+          0.31181818181818177,
+          0.017035714285714283,
+          0.07218118020200094
+        ],
+        "support_id": "drawer_cabinet",
+        "yaw_rad": 0.0
+      },
+      {
+        "color": "gray",
+        "evidence": "Photo-aligned four equal 8.75 cm drawer tiers within the user-measured 35 cm cabinet; handle centred on its tier. Original object identity and task articulation retained. Fresh native contact and task validation required.",
+        "head_center": null,
+        "id": "lowest_handle",
+        "mass_kg": 0.04,
+        "mobility": "static",
+        "parent_id": "drawer_cabinet",
+        "position_m": [
+          -0.006000000000000005,
+          -0.5906428571428571,
+          0.84405
+        ],
+        "rgba": [
+          0.68,
+          0.7,
+          0.67,
+          1.0
+        ],
+        "role": "fixture",
+        "shape": "box",
+        "size_m": [
+          0.08272727272727272,
+          0.017035714285714283,
+          0.010827177030300141
+        ],
+        "support_id": "drawer_cabinet",
+        "yaw_rad": 0.0
+      }
+    ],
+    "schema": "rssr.scene.v2",
+    "task_id": "dm6"
+  },
+  "schema": "rssr.engineered_task_asset.v1",
+  "source_case": "huggingface://HITdongdong/piper_dual_drawer_eef_xyz3d_video/episode_000000",
+  "source_collision_adapter": "finite_flat_pads_v1",
+  "success_claim": false,
+  "tapered_baskets": {}
+}

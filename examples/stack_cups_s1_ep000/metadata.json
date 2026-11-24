@@ -1,0 +1,20 @@
+{
+  "schema": "reembody.example.v1",
+  "example_id": "stack_cups_s1_ep000",
+  "task": "stack_cups",
+  "source_embodiment": "agilex_cobot_magic",
+  "target_embodiment": "astribot_s1",
+  "source_case": "stack_cups_ep000000",
+  "frames": 450,
+  "fps": 30,
+  "duration_s": 15.0,
+  "task_prompt": [
+    "Stack_the_cups_together."
+  ],
+  "stages": {
+    "01_real1_source": "Recorded source COBOT-Magic parquet trajectory + 3 synchronized camera videos",
+    "02_sim1_reconstructed": "Reconstructed MuJoCo scene, fitted cup geometry, and source action replay",
+    "03_sim2_target": "Astribot S1 target MuJoCo initial state, bound task contract, and source evaluation",
+    "04_real2_rendered": "Blender Cycles 3-view 224x224 renders and self-contained LeRobot v2.1 episode (32-D state / 22-D action)"
+  }
+}

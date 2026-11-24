@@ -1,0 +1,101 @@
+{
+  "schema": "rssr.task.contract.v1",
+  "task_id": "dm7",
+  "scene_sha256": "842f7326c1445e3d8eb0da11d643edcf02007e8e09c3585635a2186e837cf5b9",
+  "bindings": {
+    "targets": [
+      "cup_left_base",
+      "cup_right_upper"
+    ],
+    "containers": [],
+    "excluded": [],
+    "particles": [],
+    "target_region": "stack_region",
+    "articulation": null,
+    "stack_hands": {
+      "base": "left",
+      "upper": "right"
+    }
+  },
+  "predicates": [
+    {
+      "id": "lift_with_contact_00",
+      "kind": "lift_with_contact",
+      "object": "cup_left_base",
+      "hand": "left",
+      "height_m": 0.025
+    },
+    {
+      "id": "lift_with_contact_01",
+      "kind": "lift_with_contact",
+      "object": "cup_right_upper",
+      "hand": "right",
+      "height_m": 0.025
+    },
+    {
+      "id": "inside_region_02",
+      "kind": "inside_region",
+      "object": "cup_left_base",
+      "region": "stack_region",
+      "tolerance_m": 0.002
+    },
+    {
+      "id": "cup_nested_03",
+      "kind": "cup_nested",
+      "object": "cup_right_upper",
+      "support": "cup_left_base",
+      "radial_tolerance_m": 0.006,
+      "minimum_depth_m": 0.015,
+      "maximum_tilt_degrees": 15.0,
+      "floor_penetration_tolerance_m": 0.0005
+    },
+    {
+      "id": "object_contact_04",
+      "kind": "object_contact",
+      "object": "cup_right_upper",
+      "support": "cup_left_base",
+      "window_s": 0.2,
+      "minimum_fraction": 0.8
+    },
+    {
+      "id": "base_placed_before_stack_05",
+      "kind": "base_placed_before_stack",
+      "base": "cup_left_base",
+      "upper": "cup_right_upper",
+      "region": "stack_region",
+      "support_policy": "cup_nesting_v2_contact_tolerance",
+      "floor_penetration_tolerance_m": 0.0005
+    },
+    {
+      "id": "stable_06",
+      "kind": "stable",
+      "objects": [
+        "cup_left_base",
+        "cup_right_upper"
+      ],
+      "window_s": 1.0,
+      "max_motion_m": 0.003
+    },
+    {
+      "id": "released_07",
+      "kind": "released",
+      "objects": [
+        "cup_left_base",
+        "cup_right_upper"
+      ],
+      "window_s": 1.0
+    }
+  ],
+  "geometry_evaluation": "sphere_analytic_v1",
+  "sim1_success_required": false,
+  "objects_forced_allowed": false,
+  "hard_constraints": [
+    "robot_table_penetration_le_3mm",
+    "limited_joints_within_2mrad_or_2mm",
+    "solver_no_warnings",
+    "waist_coupling_within_1mrad",
+    "gripper_coupling_within_2mrad"
+  ],
+  "model_fidelity_policy": "v17; simulation assumption, not hardware calibration",
+  "contract_id": "901a66658ebbad50f4577d491405603c174a8a0d78e2dabfebf8193d60a1d389"
+}

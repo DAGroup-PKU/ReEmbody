@@ -1,0 +1,39 @@
+{
+  "schema": "rssr.s1.heightfit.measured_alignment.v2",
+  "pose_path": "${REEMBODY_S1_ALIGNMENT_DIR}/s1_current_pose.json",
+  "camera_alignment_path": "${REEMBODY_S1_ALIGNMENT_DIR}/camera_alignment.json",
+  "tabletop_z_m": 0.8,
+  "table_center_xy_m": [
+    -0.028675198314,
+    -0.715267648602
+  ],
+  "table_half_xy_m": [
+    0.6,
+    0.3
+  ],
+  "cup_centers_xy_m": [
+    [
+      0.264902340757,
+      -0.724760150204
+    ],
+    [
+      -0.260161266503,
+      -0.665437064504
+    ]
+  ],
+  "goal_center_xy_m": [
+    -0.064465487871,
+    -0.645539603262
+  ],
+  "robot_base_world_position_m": [
+    0.0,
+    0.0,
+    0.097
+  ],
+  "robot_base_world_yaw_rad": -1.57,
+  "gripper_linkage_open_prior_rad": 0.08,
+  "sdk_gripper_mapping_calibrated": false,
+  "geometry_xy_visual_estimates": true,
+  "table_xy_alignment_evidence": "Shared three-view reference fit to exact20 captured robot joints; tableXY visual registration, not hardware calibration",
+  "table_height_selection": "Final0.80m baseline selected to align wrist foreground plus head/reference room fit under user authorization; \u00b10.05m physical augmentation retained. Previous0.82m staging evidence preserved."
+}

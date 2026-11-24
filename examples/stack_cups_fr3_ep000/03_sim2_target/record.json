@@ -1,0 +1,252 @@
+{
+  "variation": {
+    "id": "stack_cups_v2_train_0000",
+    "task": "stack_cups",
+    "source_case": "stack_cups_ep000000",
+    "object_shift": {
+      "stack_region": [
+        0.006489693620714873,
+        0.09759622877963758,
+        0.0
+      ],
+      "cup_left_base": [
+        -0.016618044330216603,
+        0.25476073823317147,
+        0.02887108897470654
+      ],
+      "cup_right_upper": [
+        0.12900126586853328,
+        0.09811219451013564,
+        -0.14922789725593227
+      ]
+    },
+    "arm_q_offset": {},
+    "layout": "fr3_site_20261105d"
+  },
+  "controller": "rssr_fr3_luna_v3_20261109_attempt_01/cup_native/cup_api14_ep000_a01/episode_000000/controller.py",
+  "scene_sha256": "bec3e5b98187998f0bc2fe5df07d61f4c197ec8c4cb60fa070ad2dbdc69d6c2d",
+  "status": "completed",
+  "notes": [
+    {
+      "t": 7.2,
+      "note": "base: no straight carry clear ([\"base_transport: line not clear: {'t': 2.93, 'env': (np.float64(0.030455682187635037), ('left_fr3v2_link1_collision', 'si\"]); joint-space move"
+    },
+    {
+      "t": 7.2,
+      "note": "right_stage: 20 cm beside the stack region"
+    },
+    {
+      "t": 7.2,
+      "note": "base: no straight carry clear ([\"base_transport: line not clear: {'t': 2.93, 'env': (np.float64(0.030455682187635037), ('left_fr3v2_link1_collision', 'si\"]); joint-space move"
+    },
+    {
+      "t": 12.333,
+      "note": "left_retreat: 8 cm not reachable (left_retreat: line not clear: {'t': 0.33, 'env': (np.float64(0.03551985843115331): 5 cm"
+    },
+    {
+      "t": 12.833,
+      "note": "upper: not clear together with left_aside (upper_transport: arms not clear together: {'t': 0.0, 'env': (np.float64(0.035534); one after the other"
+    }
+  ],
+  "measurements": {
+    "contract": {
+      "task_success": true,
+      "failed_predicates": [],
+      "hard_failures": [],
+      "predicates": {
+        "lift_with_contact_00": {
+          "passed": true,
+          "max_lift_m": 0.09612146708829783,
+          "max_lift_with_hand_contact_m": 0.09612146708829783
+        },
+        "lift_with_contact_01": {
+          "passed": true,
+          "max_lift_m": 0.1891491154397491,
+          "max_lift_with_hand_contact_m": 0.1891491154397491
+        },
+        "inside_region_02": {
+          "passed": true,
+          "maximum_relation_violation_m": 0.0
+        },
+        "cup_nested_03": {
+          "passed": true,
+          "minimum_radial_clearance_m": 0.00445042613764915,
+          "minimum_floor_clearance_m": 0.01218466510055971,
+          "floor_penetration_tolerance_m": 0.0005,
+          "floor_penetration_excess_m": 0.0,
+          "minimum_overlap_clearance_m": 0.06131533199537399,
+          "maximum_relation_violation_m": 0.0
+        },
+        "object_contact_04": {
+          "passed": true,
+          "contact_fraction": 1.0
+        },
+        "base_placed_before_stack_05": {
+          "passed": true,
+          "base_placement_observed": true,
+          "stack_contact_observed": true,
+          "first_base_placed_s": 12.02499518999706,
+          "first_upper_supported_contact_s": 16.483326739992858,
+          "order_observable": true
+        },
+        "stable_06": {
+          "passed": true,
+          "maximum_motion_m": 2.0097477994101687e-07
+        },
+        "released_07": {
+          "passed": true
+        }
+      }
+    },
+    "hard": {
+      "robot_table_penetration_le_3mm": true,
+      "limited_joints_within_2mrad_or_2mm": true,
+      "solver_no_warnings": true,
+      "waist_coupling_within_1mrad": true,
+      "gripper_coupling_within_2mrad": true
+    },
+    "audit": {
+      "robot_table_penetration_m": 0.0,
+      "joint_limit_excess": -6.831677892028741e-06,
+      "finger_coupling_m": 0.00016057993812412796,
+      "solver_warnings": 0.0,
+      "joint_limit_worst": {
+        "joint": "left_g_right_driver_joint",
+        "t": 0.001,
+        "excess": -1e-05,
+        "q": 1e-05,
+        "range": [
+          0.0,
+          0.8
+        ]
+      }
+    },
+    "min_arm_clearance_m": 0.1056,
+    "min_arm_clearance_t": 12.867,
+    "min_joint_limit_margin_rad": {
+      "left": 0.4018,
+      "right": 0.5857
+    },
+    "max_joint_speed_rad_s": 0.71,
+    "max_tracking_err_rad": 0.0705,
+    "p95_tracking_err_rad": 0.0705,
+    "grasps": {
+      "left:cup_left_base": [
+        [
+          6.167,
+          12.033
+        ]
+      ],
+      "right:cup_right_upper": [
+        [
+          6.167,
+          16.433
+        ]
+      ]
+    },
+    "idle_spans": [],
+    "state_action_conflict": null,
+    "duration_s": 17.267,
+    "physics_steps": 23120,
+    "min_support_clearance_mujoco_m": 0.0699,
+    "min_arm_gap_exact_m": 0.1057,
+    "min_arm_gap_exact_t": 12.867,
+    "min_arm_gap_exact_pair": "left_fr3v2_link6_collision - right_fr3v2_link7_collision",
+    "min_support_clearance_m": 0.0699,
+    "min_support_clearance_t": 14.8,
+    "min_support_clearance_pair": "left_fr3v2_link1_collision - site_support_arch_01",
+    "fr3_limits": {
+      "pbv_violations_x1.0": {},
+      "pbv_first_violation": null,
+      "min_margin_to_fr3_v2_rad": 0.466,
+      "min_margin_to_fr3_v1_rad": 0.4311,
+      "min_margin_to_fr3_v1_joint": "left_J7",
+      "max_speed_rad_s": 0.71
+    },
+    "replay": {
+      "expected": "ed91310403a3a27657412e0927cbc16c01bece5f2d04f07b4fd6eeceef7f1e44",
+      "replay": "ed91310403a3a27657412e0927cbc16c01bece5f2d04f07b4fd6eeceef7f1e44",
+      "bit_exact": true
+    },
+    "stages": [
+      {
+        "label": "initial_wrist_camera_turn",
+        "t0": 0.0,
+        "t1": 1.767
+      },
+      {
+        "label": "approach",
+        "t0": 1.767,
+        "t1": 5.267
+      },
+      {
+        "label": "descend",
+        "t0": 5.267,
+        "t1": 6.0
+      },
+      {
+        "label": "close",
+        "t0": 6.0,
+        "t1": 6.4
+      },
+      {
+        "label": "lift",
+        "t0": 6.4,
+        "t1": 7.2
+      },
+      {
+        "label": "right_stage",
+        "t0": 7.2,
+        "t1": 7.867
+      },
+      {
+        "label": "base_transport",
+        "t0": 7.867,
+        "t1": 11.3
+      },
+      {
+        "label": "base_lower",
+        "t0": 11.3,
+        "t1": 11.933
+      },
+      {
+        "label": "base_release",
+        "t0": 11.933,
+        "t1": 12.333
+      },
+      {
+        "label": "left_retreat",
+        "t0": 12.333,
+        "t1": 12.833
+      },
+      {
+        "label": "left_aside",
+        "t0": 12.833,
+        "t1": 13.867
+      },
+      {
+        "label": "upper_transport",
+        "t0": 13.867,
+        "t1": 15.633
+      },
+      {
+        "label": "upper_lower",
+        "t0": 15.633,
+        "t1": 16.333
+      },
+      {
+        "label": "upper_release",
+        "t0": 16.333,
+        "t1": 16.733
+      },
+      {
+        "label": "right_retreat",
+        "t0": 16.733,
+        "t1": 17.267
+      }
+    ]
+  },
+  "fails": [],
+  "admitted": true,
+  "wall_s": 349.7
+}

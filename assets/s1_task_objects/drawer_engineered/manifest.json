@@ -1,0 +1,12 @@
+{
+  "authoring": "2026-10-28 user-measured drawer and photo reference",
+  "calibrated": false,
+  "files": {
+    "definition.json": "96d4ba22da01d022b36d52ef2840be5d6ea801bef4fe1cead1904edfffe0ad26"
+  },
+  "schema": "rssr.engineered_task_asset.v1",
+  "source_manifest_sha256": "3c606045cbb4542b626e3dcfcff1b10929255bde451a2a029068134934cf6b25",
+  "status": "modeled_pending_physical_validation",
+  "task_id": "dm6",
+  "version": "drawer_center_layout_v1"
+}

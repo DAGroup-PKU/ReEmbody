@@ -1,0 +1,473 @@
+{
+  "schema": "rssr.drawer.render_config.center_layout_sdk_cameras.v1",
+  "asset_blend": "assets/fr3_duo_site/desk_scene_bgfit_v3_runtime.blend",
+  "asset_sha256": "ee8efa4bc54f9db3b78d7196b45ae37c3d59d38a7a23ef45adc254f39125b1e8",
+  "asset_scene": "Scene",
+  "table_baseline_m": 0.8,
+  "height_delta_m": [
+    0,
+    0
+  ],
+  "experiment": "drawer_center_layout_20261101",
+  "registration_offset_xy_m": [
+    0.0,
+    -0.025776570174459
+  ],
+  "cpu_threads": 8,
+  "camera_alignment": {
+    "schema": "rssr.s1.camera_mounts.sdk_nominal.v1",
+    "status": "sdk_nominal",
+    "source": "pi0.5/operations/camera_mount_alignment_20261025_attempt_01/camera/SDK_S1v2_camera_nodes.json",
+    "cameras": {
+      "head_rgbd": {
+        "pos": [
+          0.0603,
+          -0.2139,
+          -0.0277
+        ],
+        "quat": [
+          0.01350906255488343,
+          -0.7104766232568323,
+          0.0295198033606712,
+          0.7029715885041192
+        ],
+        "fovy": 51.4175,
+        "reference_fovy_deg": 51.4175,
+        "reference_aspect": 1.7777777777777777,
+        "fovy_deg": 81.1218308425578,
+        "position_in_camera_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quaternion_in_camera_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "parent_body": "astribot_head_link_2",
+        "sdk_quat_raw": [
+          0.7025,
+          -0.0295,
+          -0.71,
+          -0.0135
+        ],
+        "image_roll_deg": 180.0,
+        "policy": "SDK kinematic.xml nominal optical centre/axis/fovy; image rolled 180 deg to match real/training image up.",
+        "exposure_offset_ev": -0.55
+      },
+      "left_wrist_rgbd": {
+        "pos": [
+          0.011420996159648984,
+          0.058882000224149605,
+          0.044260118849329295
+        ],
+        "quat": [
+          0.012604129490710232,
+          -0.009037420129074155,
+          0.7109134990656752,
+          0.703108425353722
+        ],
+        "fovy": 57.0,
+        "reference_fovy_deg": 57.0,
+        "reference_aspect": 1.7777777777777777,
+        "fovy_deg": 87.97424850013144,
+        "position_in_camera_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quaternion_in_camera_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "parent_body": "arm_left_tool_cam",
+        "sdk_quat_raw": [
+          0.703108425353722,
+          -0.7109134990656752,
+          -0.009037420129074155,
+          -0.012604129490710232
+        ],
+        "image_roll_deg": 180.0,
+        "policy": "SDK kinematic.xml nominal optical centre/axis/fovy; image rolled 180 deg to match real/training image up.",
+        "exposure_offset_ev": 0.65
+      },
+      "right_wrist_rgbd": {
+        "pos": [
+          0.00772,
+          0.05592,
+          0.04319
+        ],
+        "quat": [
+          -0.019860539389038687,
+          0.013493708973317153,
+          -0.7006910271198059,
+          -0.7130607009975457
+        ],
+        "fovy": 57.0,
+        "reference_fovy_deg": 57.0,
+        "reference_aspect": 1.7777777777777777,
+        "fovy_deg": 87.97424850013144,
+        "position_in_camera_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quaternion_in_camera_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "parent_body": "arm_right_tool_cam",
+        "sdk_quat_raw": [
+          -0.7130607009975457,
+          0.7006910271198059,
+          0.013493708973317153,
+          0.019860539389038687
+        ],
+        "image_roll_deg": 180.0,
+        "policy": "SDK kinematic.xml nominal optical centre/axis/fovy; image rolled 180 deg to match real/training image up.",
+        "exposure_offset_ev": 0.5
+      }
+    },
+    "replaced_fitted_mounts": {
+      "head_rgbd": {
+        "pos": [
+          0.022619845171147547,
+          -0.2400460318505255,
+          -0.045246823885230464
+        ],
+        "quat": [
+          0.08606233952483466,
+          0.7114492396588586,
+          0.07501575505710205,
+          -0.6934016798346807
+        ],
+        "fovy": 46.68734463653697,
+        "reference_fovy_deg": 46.68734463653697,
+        "reference_aspect": 1.7777777777777777,
+        "fovy_deg": 74.99365341164304,
+        "position_in_camera_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quaternion_in_camera_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "baseline_world_position_m": [
+          -0.04029723767845193,
+          -0.2581808797104311,
+          1.5504909827914213
+        ],
+        "baseline_world_rotation": [
+          [
+            -0.9984142280986754,
+            0.04085612642488199,
+            -0.03872732967401701
+          ],
+          [
+            -0.05556244110544098,
+            -0.8257494397412113,
+            0.5612937536669012
+          ],
+          [
+            -0.009046782219681242,
+            0.5625554547781308,
+            0.8267100556004142
+          ]
+        ],
+        "parent_body": "astribot_head_link_2",
+        "policy": "One fixed parent mount; all later frames use native robot kinematics.",
+        "exposure_offset_ev": -0.55
+      },
+      "left_wrist_rgbd": {
+        "pos": [
+          0.006744568667666906,
+          0.1464328753067978,
+          0.07665232327016308
+        ],
+        "quat": [
+          0.009566690715288284,
+          0.034474550449605006,
+          0.685282734400536,
+          0.7273977988230236
+        ],
+        "fovy": 54.222198704777604,
+        "reference_fovy_deg": 54.222198704777604,
+        "reference_aspect": 1.7777777777777777,
+        "fovy_deg": 84.61501072235728,
+        "position_in_camera_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quaternion_in_camera_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "baseline_world_position_m": [
+          0.3199734618889353,
+          -0.3866329842091521,
+          1.0029182651508828
+        ],
+        "baseline_world_rotation": [
+          [
+            -0.9978976766778948,
+            -5.012789991490314e-05,
+            0.0648091379980808
+          ],
+          [
+            0.06407827207165417,
+            -0.15052229818248108,
+            0.9865277557160651
+          ],
+          [
+            0.009705767830094898,
+            0.9886066129846891,
+            0.15020906375372425
+          ]
+        ],
+        "parent_body": "arm_left_tool_cam",
+        "policy": "One fixed parent mount; all later frames use native robot kinematics.",
+        "exposure_offset_ev": 0.65
+      },
+      "right_wrist_rgbd": {
+        "pos": [
+          -0.005538238890151263,
+          0.1613074787955398,
+          0.0736131169684578
+        ],
+        "quat": [
+          -0.02961458926172238,
+          -0.056056253908770524,
+          0.7044950778034461,
+          0.7068715285335033
+        ],
+        "fovy": 48.45549063590859,
+        "reference_fovy_deg": 48.45549063590859,
+        "reference_aspect": 1.7777777777777777,
+        "fovy_deg": 77.31961650818052,
+        "position_in_camera_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quaternion_in_camera_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "baseline_world_position_m": [
+          -0.28734405752041364,
+          -0.32887338433762514,
+          1.0166738161950089
+        ],
+        "baseline_world_rotation": [
+          [
+            -0.9749519204965966,
+            -0.03394800964694158,
+            -0.2198096571149888
+          ],
+          [
+            -0.21120833263148694,
+            -0.16844800897741388,
+            0.9628168613493286
+          ],
+          [
+            -0.06971221519235292,
+            0.9851257792345891,
+            0.15705860734266947
+          ]
+        ],
+        "parent_body": "arm_right_tool_cam",
+        "policy": "One fixed parent mount; all later frames use native robot kinematics.",
+        "exposure_offset_ev": 0.5
+      }
+    },
+    "note": "Not hardware-calibrated. Head SDK axis differs 16.6 deg from the photo-fitted mount; wrists 5.2/7.5 deg and 93/110 mm."
+  },
+  "environment_overrides": {},
+  "lighting_recipe": null,
+  "style_fit": {
+    "neutralize_lights": true,
+    "table_color_ramp": [
+      [
+        0.71,
+        0.683,
+        0.661
+      ],
+      [
+        0.758,
+        0.731,
+        0.705
+      ]
+    ],
+    "native_finger_base_color": [
+      0.004,
+      0.005,
+      0.005
+    ],
+    "native_finger_roughness": 0.78,
+    "native_finger_specular_ior": 0.18,
+    "primary_light_transform": {
+      "name": "Light / broad left office softbox",
+      "position_m": [
+        1.4,
+        0.8,
+        2.8
+      ],
+      "target_m": [
+        0,
+        0,
+        0.8
+      ],
+      "power_w": 180
+    },
+    "gray_panel_rgb_scale": [
+      1.02,
+      1.1,
+      1.2
+    ],
+    "baseline_area_lights": {
+      "Light / low room bounce": {
+        "position_m": [
+          0,
+          -0.8,
+          1.0
+        ],
+        "target_m": [
+          0,
+          0.365,
+          1.0
+        ],
+        "power_w": 18,
+        "size_m": [
+          3,
+          0.35
+        ],
+        "color_rgb": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "baseline_added_area_lights": {
+      "Alignment / lower panel indirect fill": {
+        "position_m": [
+          0,
+          0.312,
+          0.65
+        ],
+        "target_m": [
+          0,
+          0.3477,
+          0.95
+        ],
+        "power_w": 1.1,
+        "size_m": [
+          1.15,
+          0.015
+        ],
+        "color_rgb": [
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  },
+  "samples": 64,
+  "asset_dependencies": {
+    "textures/86a98e6088d7fee335a8ad4ab78237556e1b22b68618f36337b49f3c2c6cb56d.png": "86a98e6088d7fee335a8ad4ab78237556e1b22b68618f36337b49f3c2c6cb56d",
+    "textures/03dcf50ead7d9a3352e3307fc0f7b82189835779ebca06cfa54502e2192cda2f.png": "03dcf50ead7d9a3352e3307fc0f7b82189835779ebca06cfa54502e2192cda2f",
+    "textures/667e77d41c6f18cd778b32dee6a62a9b06580a67ef653a8813bc95bcf4ffd2fe.hdr": "667e77d41c6f18cd778b32dee6a62a9b06580a67ef653a8813bc95bcf4ffd2fe"
+  },
+  "appearance_version": "drawer_uniform_cabinet_upright_block_v9b",
+  "task": "Put_the_block_in_the_drawer.",
+  "calibration_policy": "sdk_nominal_camera_mounts_image_up_native_base_plus4cm_center_layout",
+  "background_source_config": "result/sim2-real2/s1_v3_human_align_20261018/render_config.json",
+  "background_source_config_sha256": "839e19763b0ae2cf2f06a2c8488010d36a7eb94840f0d60d1cfb9408d26a062d",
+  "no_cup_assets": true,
+  "sensor_calibration_reference": {
+    "scene": "result/policy_eval/v3_human_align_initial_state_reference_20261019/scenes/physical_00__stack_cups_ep000000.xml",
+    "scene_sha256": "dbc9482bf68eff8dd42ec7fe24f40592fec122ad446a92a72dba559354d81b76",
+    "visual_manifest": "result/policy_eval/v3_human_align_initial_state_reference_20261019/visual_manifest.jsonl",
+    "visual_manifest_sha256": "479f7bc7d563a1b50c21b3a5e57d4c2cad4414065fa8496c38010728492a0489",
+    "visual_summary": "result/policy_eval/v3_human_align_initial_state_reference_20261019/visual_summary.json",
+    "visual_summary_sha256": "a387daf3a6c5417b079742f55d1a8fce70a10157e7bab2860889a6c57eb23909"
+  },
+  "world_registration_matrix": [
+    [
+      -1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      -1.0,
+      0.0,
+      -0.6360442187764591
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "drawer_table_geometry": {
+    "revision": "user_desk_140x78_robotbase04_center_layout_v1",
+    "physical_table_center_xy_m": [
+      0.0,
+      -0.6102676486020001
+    ],
+    "physical_table_size_xy_m": [
+      1.4,
+      0.78
+    ],
+    "visual_table_center_xy_m": [
+      0.0,
+      -0.025776570174459
+    ],
+    "visual_wall_gap_m": 0.001,
+    "geometry_contract": "result/sim2-refine/drawer_center_layout_spec_20261101_attempt_01/geometry_contract.json",
+    "geometry_contract_sha256": "65a89c9f9a781ced63b274f1d89a82c634c1c44a553db6fac8d20d2030dd8691",
+    "source_blend_preserved": true
+  },
+  "native_render_material_overrides": {
+    "cabinet_linear_rgb_multiplier": [
+      0.68,
+      0.64,
+      0.57
+    ],
+    "block_linear_rgb_multiplier": [
+      0.64,
+      0.43,
+      0.45
+    ],
+    "cabinet_roughness": 0.78,
+    "block_roughness": 0.82
+  },
+  "photo_reference_role": "external_phone_appearance_and_desk_silhouette_only; preserve_S1_native_FK_camera",
+  "appearance_source": "stages/04_sim2_to_real2/configs/drawer_appearance_v9b_uniform_cabinet_upright.json",
+  "appearance_source_sha256": "06e97d4c51d5afa786ac970b68809250e6e85c5984a25d1c5dcf0f9396d4c0c7"
+}

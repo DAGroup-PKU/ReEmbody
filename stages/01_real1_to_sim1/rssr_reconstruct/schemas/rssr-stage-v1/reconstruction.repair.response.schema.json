@@ -1,0 +1,145 @@
+{
+  "type": "object",
+  "properties": {
+    "protocol": {
+      "const": "rssr.stage.v1"
+    },
+    "request_id": {
+      "type": "string",
+      "maxLength": 64
+    },
+    "stage": {
+      "const": "reconstruction.repair"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "diagnosis": {
+          "type": "string",
+          "maxLength": 400,
+          "minLength": 1
+        },
+        "hypothesis": {
+          "type": "string",
+          "maxLength": 300,
+          "minLength": 1
+        },
+        "stop": {
+          "type": "boolean"
+        },
+        "operator_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 100
+        },
+        "operator_proposal": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "maxLength": 120
+                },
+                "mechanism": {
+                  "type": "string",
+                  "maxLength": 300
+                },
+                "preconditions": {
+                  "type": "string",
+                  "maxLength": 300
+                },
+                "tool": {
+                  "const": "scene_patch"
+                },
+                "parameters": {
+                  "type": "object",
+                  "maxProperties": 32,
+                  "additionalProperties": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "min": {
+                            "type": "number"
+                          },
+                          "max": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "min",
+                          "max"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "enum": {
+                            "type": "array",
+                            "items": {
+                              "type": [
+                                "string",
+                                "number"
+                              ]
+                            },
+                            "minItems": 1,
+                            "maxItems": 20
+                          }
+                        },
+                        "required": [
+                          "enum"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "template": {
+                  "type": "object",
+                  "minProperties": 1
+                }
+              },
+              "required": [
+                "name",
+                "mechanism",
+                "preconditions",
+                "tool",
+                "parameters",
+                "template"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "arguments": {
+          "type": "object",
+          "maxProperties": 32
+        }
+      },
+      "required": [
+        "diagnosis",
+        "hypothesis",
+        "stop",
+        "operator_id",
+        "operator_proposal",
+        "arguments"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "protocol",
+    "request_id",
+    "stage",
+    "data"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

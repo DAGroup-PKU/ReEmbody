@@ -1,0 +1,13 @@
+{
+  "schema": "rssr.user_task_geometry.v1",
+  "drawer": {
+    "drawer_levels": 4,
+    "active_level_from_top": 3,
+    "active_level_from_bottom": 2,
+    "evidence": "User confirmed 4 levels and opening the second drawer from the bottom on 2026-10-11.",
+    "level_body_names_from_top": ["top_drawer_front", "middle_drawer_front", "bottom_drawer", "lowest_drawer_front"],
+    "active_body": "bottom_drawer",
+    "active_joint": "bottom_drawer_slide",
+    "legacy_name_is_not_level_number": true
+  }
+}

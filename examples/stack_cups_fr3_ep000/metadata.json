@@ -1,0 +1,21 @@
+{
+  "schema": "reembody.example.v1",
+  "example_id": "stack_cups_fr3_ep000",
+  "task": "stack_cups",
+  "source_embodiment": "agilex_cobot_magic",
+  "target_embodiment": "dual_arm_franka_fr3_robotiq_2f85",
+  "source_case": "stack_cups_ep000000",
+  "frames": 519,
+  "fps": 30,
+  "duration_s": 17.3,
+  "task_prompt": [
+    "Stack_the_cups_together."
+  ],
+  "sim2_admitted": true,
+  "stages": {
+    "01_real1_source": "Recorded source COBOT-Magic parquet trajectory + 3 synchronized camera videos",
+    "02_sim1_reconstructed": "Reconstructed MuJoCo scene, fitted object geometry, and source action replay",
+    "03_sim2_target": "Admitted Dual-Arm Franka FR3 MuJoCo trajectory, portable scene.xml, controller, and admission receipt",
+    "04_real2_rendered": "Blender Cycles 3-view 224x224 renders, start/end keyframes, and self-contained LeRobot v2.1 episode"
+  }
+}

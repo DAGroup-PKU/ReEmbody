@@ -1,0 +1,146 @@
+{
+  "type": "object",
+  "properties": {
+    "protocol": {
+      "const": "rssr.stage.v1"
+    },
+    "request_id": {
+      "type": "string",
+      "maxLength": 64
+    },
+    "stage": {
+      "const": "scene.review"
+    },
+    "context": {
+      "type": "object",
+      "properties": {
+        "case_id": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "full_evidence_sha256": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "candidate_sha256": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "frame": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "length_unit": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "angle_unit": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "camera_axes": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "calibration": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "sim2_success": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "state_trace_presentation": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "memory_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sim1_success_required": {
+          "const": false
+        }
+      },
+      "required": [
+        "case_id",
+        "full_evidence_sha256",
+        "candidate_sha256",
+        "frame",
+        "length_unit",
+        "angle_unit",
+        "camera_axes",
+        "calibration",
+        "sim2_success",
+        "state_trace_presentation",
+        "memory_version",
+        "sim1_success_required"
+      ],
+      "additionalProperties": false
+    },
+    "input": {
+      "type": "object",
+      "properties": {
+        "task": {
+          "type": "string"
+        },
+        "scene": {
+          "type": "object"
+        },
+        "numeric": {
+          "type": "object"
+        },
+        "image_order": {
+          "type": "array"
+        }
+      },
+      "required": [
+        "task",
+        "scene",
+        "numeric",
+        "image_order"
+      ],
+      "additionalProperties": false
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "label": {
+            "type": "string",
+            "maxLength": 180
+          },
+          "sha256": {
+            "type": "string",
+            "maxLength": 64
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "sha256"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 16
+    }
+  },
+  "required": [
+    "protocol",
+    "request_id",
+    "stage",
+    "context",
+    "input",
+    "assets"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

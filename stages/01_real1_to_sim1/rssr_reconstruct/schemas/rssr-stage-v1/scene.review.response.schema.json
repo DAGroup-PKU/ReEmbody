@@ -1,0 +1,165 @@
+{
+  "type": "object",
+  "properties": {
+    "protocol": {
+      "const": "rssr.stage.v1"
+    },
+    "request_id": {
+      "type": "string",
+      "maxLength": 64
+    },
+    "stage": {
+      "const": "scene.review"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "criteria": {
+          "type": "object",
+          "properties": {
+            "object_identity": {
+              "type": "object",
+              "properties": {
+                "pass": {
+                  "type": "boolean"
+                },
+                "confidence": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "evidence": {
+                  "type": "string",
+                  "maxLength": 300,
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "pass",
+                "confidence",
+                "evidence"
+              ],
+              "additionalProperties": false
+            },
+            "relative_layout": {
+              "type": "object",
+              "properties": {
+                "pass": {
+                  "type": "boolean"
+                },
+                "confidence": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "evidence": {
+                  "type": "string",
+                  "maxLength": 300,
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "pass",
+                "confidence",
+                "evidence"
+              ],
+              "additionalProperties": false
+            },
+            "geometry_scale": {
+              "type": "object",
+              "properties": {
+                "pass": {
+                  "type": "boolean"
+                },
+                "confidence": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "evidence": {
+                  "type": "string",
+                  "maxLength": 300,
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "pass",
+                "confidence",
+                "evidence"
+              ],
+              "additionalProperties": false
+            },
+            "table_support": {
+              "type": "object",
+              "properties": {
+                "pass": {
+                  "type": "boolean"
+                },
+                "confidence": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "evidence": {
+                  "type": "string",
+                  "maxLength": 300,
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "pass",
+                "confidence",
+                "evidence"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "object_identity",
+            "relative_layout",
+            "geometry_scale",
+            "table_support"
+          ],
+          "additionalProperties": false
+        },
+        "camera_issues": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "minItems": 0,
+          "maxItems": 8
+        },
+        "scene_issues": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "minItems": 0,
+          "maxItems": 8
+        },
+        "suggested_diagnosis": {
+          "type": "string",
+          "maxLength": 300
+        }
+      },
+      "required": [
+        "criteria",
+        "camera_issues",
+        "scene_issues",
+        "suggested_diagnosis"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "protocol",
+    "request_id",
+    "stage",
+    "data"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

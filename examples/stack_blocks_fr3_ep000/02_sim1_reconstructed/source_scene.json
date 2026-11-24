@@ -1,0 +1,117 @@
+{
+  "schema": "rssr.scene.v2",
+  "task_id": "dm7",
+  "objects": [
+    {
+      "id": "blue_cube",
+      "shape": "box",
+      "role": "object",
+      "color": "blue",
+      "position_m": [
+        0.3804730215536827,
+        -0.8304072320070189,
+        0.7753
+      ],
+      "size_m": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "yaw_rad": -1.6621712149138719,
+      "rgba": [
+        0.08,
+        0.38,
+        0.52,
+        1.0
+      ],
+      "mobility": "free",
+      "parent_id": null,
+      "support_id": "table",
+      "head_center": [
+        0.05,
+        0.6
+      ],
+      "evidence": "Real1 head first frame: blue block on image left; end frame: blue base of stack.",
+      "mass_kg": 0.04
+    },
+    {
+      "id": "purple_cube",
+      "shape": "box",
+      "role": "object",
+      "color": "other",
+      "position_m": [
+        -0.19273807287902353,
+        -0.7978867490826267,
+        0.7753
+      ],
+      "size_m": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "yaw_rad": -1.255062276729093,
+      "rgba": [
+        0.27,
+        0.2,
+        0.45,
+        1.0
+      ],
+      "mobility": "free",
+      "parent_id": null,
+      "support_id": "table",
+      "head_center": [
+        0.67,
+        0.58
+      ],
+      "evidence": "Real1 head first frame: purple block on image right; end frame: purple upper block.",
+      "mass_kg": 0.04
+    },
+    {
+      "id": "stack_region",
+      "shape": "region",
+      "role": "target_region",
+      "color": "black",
+      "position_m": [
+        -0.0033489085111735213,
+        -0.6676189956966767,
+        0.7517999999999999
+      ],
+      "size_m": [
+        0.18,
+        0.16,
+        0.003
+      ],
+      "yaw_rad": 0.0,
+      "rgba": [
+        0.05,
+        0.05,
+        0.05,
+        0.35
+      ],
+      "mobility": "static",
+      "parent_id": null,
+      "support_id": "table",
+      "head_center": [
+        0.516,
+        0.608
+      ],
+      "evidence": "Explicit engineered prototype from observed Real1 identity and source FK; approximate geometry, not metric reconstruction.",
+      "mass_kg": 0.001
+    }
+  ],
+  "bindings": {
+    "targets": [
+      "blue_cube",
+      "purple_cube"
+    ],
+    "containers": [],
+    "excluded": [],
+    "particles": [],
+    "target_region": "stack_region",
+    "articulation": null,
+    "stack_hands": {
+      "base": "left",
+      "upper": "right"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schema": "rssr.franka_v3.independent_user_requirement_admission.v1",
+  "reviewed_utc": "2026-11-08T18:39:04.029508+00:00",
+  "reviewer": "root independent physics/video review",
+  "admitted": true,
+  "source_id": "150case_data_enhance_blender_franka_v2/block/episode_000000",
+  "render_case": "rssr_fr3_luna_v3_20261109_attempt_01/delivery/renders/block/ep000/7bcee30b4ccb-1603856ad926/case.json",
+  "render_case_sha256": "dbd289141ddbdefe84087f7181a06f61eb58b1b65d7e287d5699a1e461a6b2af",
+  "trial_receipt_sha256": "1603856ad9267580b2593923ae6ca3d11ac5cebcc1a3be02e344b22ab480a01b",
+  "render_verification_sha256": "9278822a385fd1e5f862ef521e45c8406221a8a6ef98820772125d404368f0d9",
+  "checks": {
+    "initial_wrist_aim_before_approach": true,
+    "object_tracking_during_motion": true,
+    "overhead_then_topdown_grasp": true,
+    "rendered_wrist_visibility": true
+  },
+  "evidence_pins": {
+    "rssr_fr3_luna_v3_20261109_attempt_01/delivery/renders/block/ep000/7bcee30b4ccb-1603856ad926/ep000/config.json": "c25f8189eb676d05d44062e4000226b0a0500dc385857be60d47b192fb2a2a12",
+    "rssr_fr3_luna_v3_20261109_attempt_01/delivery/renders/block/ep000/7bcee30b4ccb-1603856ad926/ep000/source/source.json": "1699e99c4bab1ce5c93214b101cd64ebc28c9a4ade8d9897836f8588f20b2e4b",
+    "rssr_fr3_luna_v3_20261109_attempt_01/delivery/renders/block/ep000/7bcee30b4ccb-1603856ad926/ep000/render/render_receipt.json": "776ea3530949466382030d51052471902df412777ae8079a0920b72ada8519d9",
+    "rssr_fr3_luna_v3_20261109_attempt_01/delivery/renders/block/ep000/7bcee30b4ccb-1603856ad926/selection.json": "acf98f571dc3aa12da9d3a44a9162e84c4b7d7d21ac9c0b27642070366fc29c8",
+    "rssr_fr3_luna_v3_20261109_attempt_01/delivery/renders/block/ep000/7bcee30b4ccb-1603856ad926/ep000/source/geometry.json": "a4a2cbedba1f2a7c4da196d4048eda954a820bc501863a1bed4d8df35744f1b4",
+    "rssr_fr3_luna_v3_20261109_attempt_01/delivery/renders/block/ep000/7bcee30b4ccb-1603856ad926/ep000/source/poses.npz": "fc3afe8d5c87b19c925d3e948089c1d0f943edaf2c12bff5aafd1de66d65f8cd",
+    "rssr_fr3_luna_v3_20261109_attempt_01/delivery/renders/block/ep000/7bcee30b4ccb-1603856ad926/ep000/source/cameras.json": "b45447181e69bca7f3f1c2ef1bc1c8c00f1265a6f8fb48439e6ae7a157bd347a",
+    "rssr_fr3_luna_v3_20261109_attempt_01/delivery/renders/block/ep000/7bcee30b4ccb-1603856ad926/ep000/render/frame_000000_head.png": "74f6b2ed5555b6d187695e58bac93d0ebd4304bf51b78288afe3f1416954cb74",
+    "rssr_fr3_luna_v3_20261109_attempt_01/delivery/renders/block/ep000/7bcee30b4ccb-1603856ad926/ep000/render/head.mp4": "7e0b25085ca7e5e9f31d1bcd58152750e4c3174860b3cc3d0632af22935e657b",
+    "rssr_fr3_luna_v3_20261109_attempt_01/delivery/renders/block/ep000/7bcee30b4ccb-1603856ad926/ep000/render/left_wrist.mp4": "75e0f1cb280530e7ee90affe9ff8a62f3fd333005a12e30504a038478363c6a9",
+    "rssr_fr3_luna_v3_20261109_attempt_01/delivery/renders/block/ep000/7bcee30b4ccb-1603856ad926/ep000/render/frame_000000_left_wrist.png": "f506cf9d9708faada2d373818fc500d1dbcb9ac28437995a1ca58316835a0704",
+    "rssr_fr3_luna_v3_20261109_attempt_01/delivery/renders/block/ep000/7bcee30b4ccb-1603856ad926/ep000/render/right_wrist.mp4": "bd72539343fd1c53f0734f0c85dd8755eccac284a8c5dfdc25d06129910e222f",
+    "rssr_fr3_luna_v3_20261109_attempt_01/delivery/renders/block/ep000/7bcee30b4ccb-1603856ad926/ep000/render/frame_000522_left_wrist.png": "142b8421bf2a4471b73463e96745e2871cf8393f6359adade54083694bbe0b07",
+    "rssr_fr3_luna_v3_20261109_attempt_01/delivery/renders/block/ep000/7bcee30b4ccb-1603856ad926/ep000/render/frame_000522_right_wrist.png": "be2a62e4f619c5b6df0910a998890947b72d0e24b7b91d08e895c29c7ce2b868",
+    "rssr_fr3_luna_v3_20261109_attempt_01/delivery/renders/block/ep000/7bcee30b4ccb-1603856ad926/ep000/render/frame_000000_right_wrist.png": "c95e6746a324350e132476e9d84c5206cf68e4c418e33ac68442e8cf24ac7b4f",
+    "rssr_fr3_luna_v3_20261109_attempt_01/delivery/renders/block/ep000/7bcee30b4ccb-1603856ad926/ep000/render/frame_000522_head.png": "a7f2ac65da6489c6b376ab61b775adecc084bb67113818e27313f6fcea59cd83",
+    "rssr_fr3_luna_v3_20261109_attempt_01/delivery/renders/block/ep000/7bcee30b4ccb-1603856ad926/case.json": "dbd289141ddbdefe84087f7181a06f61eb58b1b65d7e287d5699a1e461a6b2af",
+    "result/franka_fr3_duo_luna_trajectory_v3_20261109_attempt_01/archive/block_native/api_round10/episode_000000-b41d8408f28d/trial_receipt.json": "1603856ad9267580b2593923ae6ca3d11ac5cebcc1a3be02e344b22ab480a01b",
+    "result/franka_fr3_duo_luna_trajectory_v3_20261109_attempt_01/archive/block_native/api_round10/episode_000000-b41d8408f28d/every_step_geometry.npz": "de39d313c04d56b2707760a0318f8ddd87bd4176f1e2c0a4fcc48aba78b49201",
+    "result/franka_fr3_duo_luna_trajectory_v3_20261109_attempt_01/archive/block_native/api_round10/episode_000000-b41d8408f28d/every_step_geometry_receipt.json": "2bf87fbb67098eb691f385eccd2ac252dee5df6b6db7752a040e2932fb71b651",
+    "result/franka_fr3_duo_luna_trajectory_v3_20261109_attempt_01/archive/block_native/api_round10/episode_000000-b41d8408f28d/initial_state_receipt.json": "b4585e8a373caf01c9aae5c2b4ebb49f678d0f15a2faddb0bfae145b82b05c9d",
+    "result/franka_fr3_duo_luna_trajectory_v3_20261109_attempt_01/archive/block_native/api_round10/episode_000000-b41d8408f28d/native/record.json": "bea90e7107a34073ee1e51c8e6dcfc08e3df05826f5e7c2a9d2be7df6d7d96a6",
+    "result/franka_fr3_duo_luna_trajectory_v3_20261109_attempt_01/archive/block_native/api_round10/episode_000000-b41d8408f28d/native/episode.npz": "b5ab3d27e6918c5ea22e3b53cd43a0eb00030570f9a25e43a7d31fc64ccfddbd",
+    "trajectory_franka_v3/block_optimization/round10_ep000_pixel_visibility_diagnostic.json": "0ac01658d462bfb19f09a993d64aa6f6e5a60a84c4ff3c23ff24f7f820b5f78b",
+    "trajectory_franka_v3/block_optimization/round10_ep000_camera_contactsheet.jpg": "255bdb6fb8515209118d23a3d974eba95543c38dfe4852247d63f9e2a592deab",
+    "trajectory_franka_v3/block_optimization/round10_ep000_camera_contactsheet_manifest.json": "b4fd6ec2b11906ba21e53f940552ed986d3a7a190e22ec80986ded9d7544e1ab",
+    "trajectory_franka_v3/block_optimization/round10_vs05_actual_prefix_comparison.json": "598ba6b6738dffc9d40a1fafe5f5a7a35b0009d8077903db24183253dd518919",
+    "trajectory_franka_v3/block_optimization/review_round10.json": "052184025374e328ca996b89c19ec80f781067ef453a6fa3744a929b060d752f",
+    "trajectory_franka_v3/block_optimization/batch_geometry_round10/ep000_1603856ad926.json": "af56774ab20f9c1715defeb462ba863dc916f104360d94214ba15c03e25ce6ab",
+    "rssr_fr3_luna_v3_20261109_attempt_01/delivery/renders/block/ep000/7bcee30b4ccb-1603856ad926/verification.json": "9278822a385fd1e5f862ef521e45c8406221a8a6ef98820772125d404368f0d9",
+    "result/franka_fr3_duo_luna_trajectory_v3_20261109_attempt_01/control/work/trajectory_franka_v3/api_stack_blocks_round10/controller.py": "7bcee30b4ccbe7cad54b39310ae4960dbe30bf6b39425b88be7e7c45040e3e8c",
+    "result/franka_fr3_duo_luna_trajectory_v3_20261109_attempt_01/control/work/trajectory_franka_v3/api_stack_blocks_round10/request.json": "b964cc158ed4b665ebecac112f072a7e97b2f642b8830e7c4ae0509b162fea10",
+    "result/franka_fr3_duo_luna_trajectory_v3_20261109_attempt_01/control/work/trajectory_franka_v3/api_stack_blocks_round10/response.json": "3372978e9f04b1833719830fa369702299961df6977fb66b6beaa1dc1259a9a9",
+    "result/franka_fr3_duo_luna_trajectory_v3_20261109_attempt_01/control/work/trajectory_franka_v3/api_stack_blocks_round10/raw_provider_response.json": "7cbea8aefabe43dcb71500bdfd51fdcdfff4412ff95694a8c4f245a581bb8c8a",
+    "result/franka_fr3_duo_luna_trajectory_v3_20261109_attempt_01/control/work/trajectory_franka_v3/block_optimization/round10_ep000_independent_evidence_review.json": "25e671b7ff30ac4d4c047c1792858b881b5fdef6fa0783a350c4ec833c2c4459"
+  },
+  "findings": {
+    "full_physics_duration_s": 19.39999223999011,
+    "initial_alignment_before_approach": true,
+    "overhead_clearances_m": [
+      0.05108303007595374,
+      0.050348488147029656
+    ],
+    "every1200Hz_target_geometry_in_FOV_after_alignment_until_release": true,
+    "all30Hz_active_video_frames_have_bound_target_RGB_in_actual_object_ROI": true,
+    "actual_contactsheet_review": "Both targets visible during approach, top-down close and loaded movement; final red-on-green stack visible."
+  },
+  "measurement_limits": [
+    "Every integration state and every exported30Hz frame are measured; no mathematical claim for unrecorded continuous-time instants.",
+    "RGB thresholds and pixel areas are diagnostics, not new user hard gates or semantic instance segmentation. Actual object-bound projection and human frame recognition provide complementary evidence.",
+    "No arbitrary centroid/patch angular threshold is asserted as a user requirement; fixed surface patch is diagnostic."
+  ],
+  "active_tracking_scope": "Each grasping wrist, initial alignment completed through its target release; partial gripper occlusion permitted and no arbitrary angle/pixel threshold added."
+}

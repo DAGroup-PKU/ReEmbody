@@ -1,0 +1,240 @@
+{
+  "variation": {
+    "id": "stack_blocks_v2_train_0000",
+    "task": "stack_blocks",
+    "source_case": "stack_blocks_ep000000",
+    "object_shift": {
+      "stack_region": [
+        -0.03519720408538876,
+        0.07735355946535971,
+        0.0
+      ],
+      "blue_cube": [
+        -0.1310085956905306,
+        0.21781973716294178,
+        1.8519507837955567
+      ],
+      "purple_cube": [
+        -0.12421257300210817,
+        0.2045876567757401,
+        1.3312203224547503
+      ]
+    },
+    "arm_q_offset": {},
+    "layout": "fr3_site_20261105d"
+  },
+  "controller": "rssr_fr3_luna_v3_20261109_attempt_01/block_native/api_round10/episode_000000/controller.py",
+  "scene_sha256": "b7376af415475e85bc2f2c8c1c68cdc6234d78ac22b361b47f2732cbdf52f987",
+  "status": "completed",
+  "notes": [
+    {
+      "t": 10.033,
+      "note": "right_stage: 25 cm beside the stack region"
+    },
+    {
+      "t": 13.633,
+      "note": "left_aside: planned 5 own-side endpoints; shortest 0.24 m"
+    },
+    {
+      "t": 16.467,
+      "note": "upper: checked paired aside/carry; aside endpoint 0.24 m, delay 11 frames"
+    },
+    {
+      "t": 17.4,
+      "note": "API05 wrist-first gaze/grasp retained; complete paired schedules checked before one execution call"
+    },
+    {
+      "t": 17.4,
+      "note": "arch_away: left {'poses': 12, 'line_points': 826, 'raised_cm': np.float64(3.3072938511933216), 'pushed_search': 228}; right {'poses': 39, 'line_points': 586, 'raised_cm': np.float64(3.4001836102658096)}"
+    }
+  ],
+  "measurements": {
+    "contract": {
+      "task_success": true,
+      "failed_predicates": [],
+      "hard_failures": [],
+      "predicates": {
+        "lift_with_contact_00": {
+          "passed": true,
+          "max_lift_m": 0.0987360209007907,
+          "max_lift_with_hand_contact_m": 0.0987360209007907
+        },
+        "lift_with_contact_01": {
+          "passed": true,
+          "max_lift_m": 0.14951079087104036,
+          "max_lift_with_hand_contact_m": 0.14951079087104036
+        },
+        "inside_region_02": {
+          "passed": true,
+          "maximum_relation_violation_m": 0.0
+        },
+        "stable_supported_on_03": {
+          "passed": true,
+          "minimum_center_margin_clearance_m": 0.01982508411402493,
+          "minimum_height_clearance_m": 0.004996768320474263,
+          "maximum_relation_violation_m": 0.0,
+          "contact_release_and_stability_required_separately": true
+        },
+        "object_contact_04": {
+          "passed": true,
+          "contact_fraction": 1.0
+        },
+        "base_placed_before_stack_05": {
+          "passed": true,
+          "base_placement_observed": true,
+          "stack_contact_observed": true,
+          "first_base_placed_s": 12.99166146999615,
+          "first_upper_supported_contact_s": 16.7583266299926,
+          "order_observable": true
+        },
+        "stable_06": {
+          "passed": true,
+          "maximum_motion_m": 1.0573319880261304e-08
+        },
+        "released_07": {
+          "passed": true
+        }
+      }
+    },
+    "hard": {
+      "robot_table_penetration_le_3mm": true,
+      "limited_joints_within_2mrad_or_2mm": true,
+      "solver_no_warnings": true,
+      "waist_coupling_within_1mrad": true,
+      "gripper_coupling_within_2mrad": true
+    },
+    "audit": {
+      "robot_table_penetration_m": 0.0,
+      "joint_limit_excess": -6.83194294588174e-06,
+      "finger_coupling_m": 7.522222228328879e-06,
+      "solver_warnings": 0.0,
+      "joint_limit_worst": {
+        "joint": "left_g_right_driver_joint",
+        "t": 0.001,
+        "excess": -1e-05,
+        "q": 1e-05,
+        "range": [
+          0.0,
+          0.8
+        ]
+      }
+    },
+    "min_arm_clearance_m": 0.1115,
+    "min_arm_clearance_t": 15.033,
+    "min_joint_limit_margin_rad": {
+      "left": 0.5104,
+      "right": 0.8155
+    },
+    "max_joint_speed_rad_s": 0.712,
+    "max_tracking_err_rad": 0.0707,
+    "p95_tracking_err_rad": 0.0678,
+    "grasps": {
+      "left:blue_cube": [
+        [
+          9.067,
+          12.833
+        ]
+      ],
+      "right:purple_cube": [
+        [
+          9.067,
+          16.6
+        ]
+      ]
+    },
+    "idle_spans": [],
+    "state_action_conflict": null,
+    "duration_s": 17.4,
+    "physics_steps": 23280,
+    "min_support_clearance_mujoco_m": 0.0973,
+    "min_arm_gap_exact_m": 0.1116,
+    "min_arm_gap_exact_t": 15.033,
+    "min_arm_gap_exact_pair": "left_g_right_coupler - right_g_left_coupler",
+    "min_support_clearance_m": 0.0947,
+    "min_support_clearance_t": 2.067,
+    "min_support_clearance_pair": "right_fr3v2_link1_collision - site_support_arch_21",
+    "fr3_limits": {
+      "pbv_violations_x1.0": {},
+      "pbv_first_violation": null,
+      "min_margin_to_fr3_v2_rad": 0.5926,
+      "min_margin_to_fr3_v1_rad": 0.5402,
+      "min_margin_to_fr3_v1_joint": "left_J2",
+      "max_speed_rad_s": 0.716
+    },
+    "replay": {
+      "expected": "78cf915a8ccc3167c094964b2b09c12a2ce751bd3ca85ea345c37da357805653",
+      "replay": "78cf915a8ccc3167c094964b2b09c12a2ce751bd3ca85ea345c37da357805653",
+      "bit_exact": true
+    },
+    "stages": [
+      {
+        "label": "wrist_look",
+        "t0": 0.0,
+        "t1": 3.167
+      },
+      {
+        "label": "approach",
+        "t0": 3.167,
+        "t1": 7.833
+      },
+      {
+        "label": "descend",
+        "t0": 7.833,
+        "t1": 8.833
+      },
+      {
+        "label": "close",
+        "t0": 8.833,
+        "t1": 9.233
+      },
+      {
+        "label": "lift",
+        "t0": 9.233,
+        "t1": 10.033
+      },
+      {
+        "label": "base_transport",
+        "t0": 10.033,
+        "t1": 12.067
+      },
+      {
+        "label": "base_lower",
+        "t0": 12.067,
+        "t1": 12.7
+      },
+      {
+        "label": "base_release",
+        "t0": 12.7,
+        "t1": 13.1
+      },
+      {
+        "label": "left_retreat",
+        "t0": 13.1,
+        "t1": 13.633
+      },
+      {
+        "label": "upper_transport",
+        "t0": 13.633,
+        "t1": 15.833
+      },
+      {
+        "label": "upper_lower",
+        "t0": 15.833,
+        "t1": 16.467
+      },
+      {
+        "label": "upper_release",
+        "t0": 16.467,
+        "t1": 16.867
+      },
+      {
+        "label": "right_retreat",
+        "t0": 16.867,
+        "t1": 17.4
+      }
+    ]
+  },
+  "fails": [],
+  "admitted": true,
+  "wall_s": 324.8
+}

@@ -1,0 +1,96 @@
+{
+  "type": "object",
+  "properties": {
+    "protocol": {
+      "const": "rssr.stage.v1"
+    },
+    "request_id": {
+      "type": "string",
+      "maxLength": 64
+    },
+    "stage": {
+      "const": "camera.review"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "images_visible": {
+          "type": "boolean"
+        },
+        "views": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "enum": [
+                  "sim1",
+                  "sim2"
+                ]
+              },
+              "view": {
+                "enum": [
+                  "head",
+                  "left_wrist",
+                  "right_wrist"
+                ]
+              },
+              "orientation_consistent": {
+                "type": "boolean"
+              },
+              "fov_adequate": {
+                "type": "boolean"
+              },
+              "role_correct": {
+                "type": "boolean"
+              },
+              "key_objects_visible": {
+                "type": "boolean"
+              },
+              "reason": {
+                "type": "string",
+                "maxLength": 300,
+                "minLength": 1
+              }
+            },
+            "required": [
+              "kind",
+              "view",
+              "orientation_consistent",
+              "fov_adequate",
+              "role_correct",
+              "key_objects_visible",
+              "reason"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 3,
+          "maxItems": 6
+        },
+        "unresolved": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 240
+          },
+          "minItems": 0,
+          "maxItems": 8
+        }
+      },
+      "required": [
+        "images_visible",
+        "views",
+        "unresolved"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "protocol",
+    "request_id",
+    "stage",
+    "data"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

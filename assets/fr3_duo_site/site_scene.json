@@ -1,0 +1,286 @@
+{
+  "schema": "rssr.fr3_duo.site_scene.v1",
+  "source": "../../assets/fr3_duo_site/desk_scene_bgfit_v3_runtime.blend",
+  "source_sha256": "ee8efa4bc54f9db3b78d7196b45ae37c3d59d38a7a23ef45adc254f39125b1e8",
+  "source_unchanged": true,
+  "parameters": "site_parameters_v8.json",
+  "parameters_sha256": "3991fe691f90021ace098f82577562e336756274947fbaeadd83a63767ecdb99",
+  "code_sha256": "3fc0eebf77708888e28872fbcfd5866b029409561f0d617117ec1f15134a5ea5",
+  "derived_blend": "result/franka_fr3_duo_site_v8_20261105_attempt_01/env/site_v8/site_scene.blend",
+  "derived_sha256": "f4f7f6b0233eb09c916cb805708be432eca69cbe2edb8f859b698885d935e46c",
+  "asset_dependencies": {
+    "textures/86a98e6088d7fee335a8ad4ab78237556e1b22b68618f36337b49f3c2c6cb56d.png": "86a98e6088d7fee335a8ad4ab78237556e1b22b68618f36337b49f3c2c6cb56d",
+    "textures/03dcf50ead7d9a3352e3307fc0f7b82189835779ebca06cfa54502e2192cda2f.png": "03dcf50ead7d9a3352e3307fc0f7b82189835779ebca06cfa54502e2192cda2f",
+    "textures/667e77d41c6f18cd778b32dee6a62a9b06580a67ef653a8813bc95bcf4ffd2fe.hdr": "667e77d41c6f18cd778b32dee6a62a9b06580a67ef653a8813bc95bcf4ffd2fe"
+  },
+  "blender_version": "4.5.14 LTS",
+  "lights": [
+    {
+      "name": "Site / ceiling panel over desk",
+      "position_m": [
+        0.0,
+        -0.6499999761581421,
+        2.8499999046325684
+      ],
+      "target_m": [
+        0.0,
+        -0.6499999761581421,
+        0.8499999046325684
+      ],
+      "energy_w": 160.0,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "size_m": [
+        2.4000000953674316,
+        0.6000000238418579
+      ]
+    },
+    {
+      "name": "Site / ceiling panel over robot",
+      "position_m": [
+        0.0,
+        0.6000000238418579,
+        2.8499999046325684
+      ],
+      "target_m": [
+        -1.2426197848469656e-08,
+        0.4057994484901428,
+        0.8594506978988647
+      ],
+      "energy_w": 110.0,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "size_m": [
+        2.4000000953674316,
+        0.6000000238418579
+      ]
+    },
+    {
+      "name": "Site / ceiling panel right",
+      "position_m": [
+        -1.7999999523162842,
+        -0.6000000238418579,
+        2.8499999046325684
+      ],
+      "target_m": [
+        -1.7999999523162842,
+        -0.6000000238418579,
+        0.8499999046325684
+      ],
+      "energy_w": 120.0,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "size_m": [
+        2.4000000953674316,
+        0.6000000238418579
+      ]
+    },
+    {
+      "name": "Site / ceiling panel left",
+      "position_m": [
+        1.7999999523162842,
+        -0.6000000238418579,
+        2.8499999046325684
+      ],
+      "target_m": [
+        1.7999999523162842,
+        -0.6000000238418579,
+        0.8499999046325684
+      ],
+      "energy_w": 120.0,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "size_m": [
+        2.4000000953674316,
+        0.6000000238418579
+      ]
+    },
+    {
+      "name": "Site / window side fill",
+      "position_m": [
+        2.299999952316284,
+        -0.5,
+        1.600000023841858
+      ],
+      "target_m": [
+        0.4125971794128418,
+        -0.582061231136322,
+        0.943511962890625
+      ],
+      "energy_w": 30.0,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "size_m": [
+        1.5,
+        1.0
+      ]
+    }
+  ],
+  "table": {
+    "top_m": 0.7900000214576721,
+    "width_m": 1.399999976158142,
+    "depth_m": 0.7800000309944153,
+    "changed_objects": [
+      "Desk / 1200 x 600 x 18 mm top",
+      "Desk / lower edge band",
+      "Left / upper sliding post",
+      "Left / tabletop support",
+      "Right / upper sliding post",
+      "Right / tabletop support",
+      "Crank / axle",
+      "Crank / bent downward arm",
+      "Crank / ivory grip",
+      "Crank / grip molding rib",
+      "Crank / grip molding rib.001",
+      "Crank / grip molding rib.002",
+      "Crank / grip molding rib.003",
+      "Crank / grip molding rib.004",
+      "Crank / grip molding rib.005",
+      "Crank / grip molding rib.006",
+      "Desktop / fine wear 0",
+      "Desktop / fine wear 1",
+      "Desktop / fine wear 2",
+      "Desktop / fine wear 3",
+      "Desktop / small central surface nick",
+      "Desktop / nick exposed substrate"
+    ],
+    "model_scale_xy": [
+      1.1666666666666667,
+      1.3
+    ]
+  },
+  "removed_s1_room_objects": 206,
+  "carpet_tiles": 360,
+  "created_objects": 113,
+  "joined_static_mesh_objects": 515,
+  "created": [
+    "Site / desk cloth",
+    "Site / white pillar",
+    "Site / pillar skirting front",
+    "Site / pillar skirting right",
+    "Site / pillar skirting left",
+    "Site / curtain wall glass",
+    "Site / mullion 0",
+    "Site / mullion 1",
+    "Site / mullion 2",
+    "Site / mullion 3",
+    "Site / mullion 4",
+    "Site / mullion 5",
+    "Site / mullion 6",
+    "Site / mullion 7",
+    "Site / mullion 8",
+    "Site / transom 0",
+    "Site / transom 1",
+    "Site / far wall right",
+    "Site / far wall front",
+    "Site / far wall back",
+    "Site / ceiling",
+    "Site / LED strip 0",
+    "Site / LED strip 1",
+    "Site / LED strip 2",
+    "Site / LED strip 3",
+    "Site / LED strip 4",
+    "Site / LED strip 5",
+    "Site / LED strip 6",
+    "Site / LED strip 7",
+    "Site / LED strip 8",
+    "Site / LED strip 9",
+    "Site / LED strip 10",
+    "Site / LED strip 11",
+    "Site / LED strip 12",
+    "Site / LED strip 13",
+    "Site / LED strip 14",
+    "Site / LED strip 15",
+    "Site / LED strip 16",
+    "Site / LED strip 17",
+    "Site / LED strip 18",
+    "Site / office desk 0 top",
+    "Site / office desk 0 leg -1",
+    "Site / office desk 0 leg 1",
+    "Site / office desk 0 monitor",
+    "Site / office desk 0 monitor stand",
+    "Site / chair 0 seat",
+    "Site / chair 0 back",
+    "Site / chair 0 post",
+    "Site / office desk 1 top",
+    "Site / office desk 1 leg -1",
+    "Site / office desk 1 leg 1",
+    "Site / office desk 1 monitor",
+    "Site / office desk 1 monitor stand",
+    "Site / chair 1 seat",
+    "Site / chair 1 back",
+    "Site / chair 1 post",
+    "Site / office desk 2 top",
+    "Site / office desk 2 leg -1",
+    "Site / office desk 2 leg 1",
+    "Site / office desk 2 monitor",
+    "Site / office desk 2 monitor stand",
+    "Site / chair 2 seat",
+    "Site / chair 2 back",
+    "Site / chair 2 post",
+    "Site / office desk 3 top",
+    "Site / office desk 3 leg -1",
+    "Site / office desk 3 leg 1",
+    "Site / office desk 3 monitor",
+    "Site / office desk 3 monitor stand",
+    "Site / chair 3 seat",
+    "Site / chair 3 back",
+    "Site / chair 3 post",
+    "Site / office desk 4 top",
+    "Site / office desk 4 leg -1",
+    "Site / office desk 4 leg 1",
+    "Site / office desk 4 monitor",
+    "Site / office desk 4 monitor stand",
+    "Site / chair 4 seat",
+    "Site / chair 4 back",
+    "Site / chair 4 post",
+    "Site / office desk 5 top",
+    "Site / office desk 5 leg -1",
+    "Site / office desk 5 leg 1",
+    "Site / office desk 5 monitor",
+    "Site / office desk 5 monitor stand",
+    "Site / chair 5 seat",
+    "Site / chair 5 back",
+    "Site / chair 5 post",
+    "Site / orange sofa seat",
+    "Site / orange sofa back",
+    "Site / workbench top",
+    "Site / workbench leg -1 -1",
+    "Site / workbench leg -1 1",
+    "Site / workbench leg 1 -1",
+    "Site / workbench leg 1 1",
+    "Site / workbench case",
+    "Site / black floor cabinet left of the desk",
+    "Site / cart post +0.12 -1",
+    "Site / cart post -0.42 -1",
+    "Site / cart post +0.12 1",
+    "Site / cart post -0.42 1",
+    "Site / cart rail z0.12",
+    "Site / cart rail z0.74",
+    "Site / controller box",
+    "Site / e-stop box",
+    "Site / e-stop button",
+    "Site / cart wheel +0.12 -1",
+    "Site / cart wheel -0.42 -1",
+    "Site / cart wheel +0.12 1",
+    "Site / cart wheel -0.42 1",
+    "Site / riser frame (placeholder)",
+    "Site / camera arch",
+    "Site / D455 housing"
+  ]
+}

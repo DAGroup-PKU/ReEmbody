@@ -1,0 +1,194 @@
+<mujoco model="rssr_source_proxy">
+  <compiler angle="radian" />
+  <option timestep=".001" integrator="implicitfast" iterations="100" tolerance="1e-9" />
+  <asset>
+    <mesh name="base_link" file="../../../../third_party/piper_description/meshes/base_link.STL" />
+    <mesh name="link1" file="../../../../third_party/piper_description/meshes/link1.STL" />
+    <mesh name="link2" file="../../../../third_party/piper_description/meshes/link2.STL" />
+    <mesh name="link3" file="../../../../third_party/piper_description/meshes/link3.STL" />
+    <mesh name="link4" file="../../../../third_party/piper_description/meshes/link4.STL" />
+    <mesh name="link5" file="../../../../third_party/piper_description/meshes/link5.STL" />
+    <mesh name="link6" file="../../../../third_party/piper_description/meshes/link6.STL" />
+    <mesh name="gripper_base" file="../../../../third_party/piper_description/meshes/gripper_base.STL" />
+    <mesh name="link7" file="../../../../third_party/piper_description/meshes/link7.STL" />
+    <mesh name="link8" file="../../../../third_party/piper_description/meshes/link8.STL" />
+    <mesh name="engineered_equivalent_worktable_top" vertex="-0.6 -0.4 -0.025 -0.6 -0.4 0.025 -0.6 0.4 -0.025 -0.6 0.4 0.025 0.6 -0.4 -0.025 0.6 -0.4 0.025 0.6 0.4 -0.025 0.6 0.4 0.025" />
+    <mesh name="engineered_equivalent_worktable_leg_0" vertex="-0.025 -0.025 -0.35 -0.025 -0.025 0.35 -0.025 0.025 -0.35 -0.025 0.025 0.35 0.025 -0.025 -0.35 0.025 -0.025 0.35 0.025 0.025 -0.35 0.025 0.025 0.35" />
+    <mesh name="engineered_equivalent_worktable_leg_1" vertex="-0.025 -0.025 -0.35 -0.025 -0.025 0.35 -0.025 0.025 -0.35 -0.025 0.025 0.35 0.025 -0.025 -0.35 0.025 -0.025 0.35 0.025 0.025 -0.35 0.025 0.025 0.35" />
+    <mesh name="engineered_equivalent_worktable_leg_2" vertex="-0.025 -0.025 -0.35 -0.025 -0.025 0.35 -0.025 0.025 -0.35 -0.025 0.025 0.35 0.025 -0.025 -0.35 0.025 -0.025 0.35 0.025 0.025 -0.35 0.025 0.025 0.35" />
+    <mesh name="engineered_equivalent_worktable_leg_3" vertex="-0.025 -0.025 -0.35 -0.025 -0.025 0.35 -0.025 0.025 -0.35 -0.025 0.025 0.35 0.025 -0.025 -0.35 0.025 -0.025 0.35 0.025 0.025 -0.35 0.025 0.025 0.35" />
+  </asset>
+  <worldbody>
+    <body name="left_base" pos="0.3082239821 -0.3429072498 0.7247380123" quat="0.7071067812 0 0 -0.7071067812">
+      <geom type="mesh" rgba=".09 .10 .11 1" mesh="base_link" name="left_base_link_geom" contype="1" conaffinity="6" friction="1 .01 .002" condim="4" solref=".006 1" />
+      <body name="left_link1" pos="0 0 0.123">
+        <inertial pos="0.000121505 0.000104632 -0.00438597" quat="0.486797 0.49897 -0.50059 0.513292" mass="0.215052" diaginertia="0.000116369 0.00010964 9.9555e-05" />
+        <joint name="left_joint1" pos="0 0 0" axis="0 0 1" limited="true" range="-2.618 2.168" damping="2" solreflimit=".003 1" solimplimit=".99 .999 .001" />
+        <geom type="mesh" rgba=".09 .10 .11 1" mesh="link1" name="left_link1_geom" contype="1" conaffinity="6" friction="1 .01 .002" condim="4" solref=".006 1" />
+        <body name="left_link2" pos="0 0 0" quat="0.0356735 -0.0356786 -0.706207 -0.706205">
+          <inertial pos="0.198666 -0.0109269 0.00142122" quat="0.0189031 0.705267 -0.0456298 0.707219" mass="0.463914" diaginertia="0.00104423 0.0010069 0.000207486" />
+          <joint name="left_joint2" pos="0 0 0" axis="0 0 1" limited="true" range="0 3.14" damping="2" solreflimit=".003 1" solimplimit=".99 .999 .001" />
+          <geom type="mesh" rgba=".09 .10 .11 1" mesh="link2" name="left_link2_geom" contype="1" conaffinity="6" friction="1 .01 .002" condim="4" solref=".006 1" />
+          <body name="left_link3" pos="0.28503 0 0" quat="0.637536 0 0 -0.77042">
+            <inertial pos="-0.0202738 -0.133915 -0.000458683" quat="0.528127 0.491307 -0.505056 0.473938" mass="0.219942" diaginertia="0.000201238 0.000190068 7.08709e-05" />
+            <joint name="left_joint3" pos="0 0 0" axis="0 0 1" limited="true" range="-2.967 0" damping="2" solreflimit=".003 1" solimplimit=".99 .999 .001" />
+            <geom type="mesh" rgba=".09 .10 .11 1" mesh="link3" name="left_link3_geom" contype="1" conaffinity="6" friction="1 .01 .002" condim="4" solref=".006 1" />
+            <body name="left_link4" pos="-0.021984 -0.25075 0" quat="0.707105 0.707108 0 0">
+              <inertial pos="-9.66636e-05 0.000876064 -0.00496881" quat="0.512749 0.48584 0.481646 0.518714" mass="0.131814" diaginertia="5.1333e-05 4.14831e-05 3.96892e-05" />
+              <joint name="left_joint4" pos="0 0 0" axis="0 0 1" limited="true" range="-1.745 1.745" damping="2" solreflimit=".003 1" solimplimit=".99 .999 .001" />
+              <geom type="mesh" rgba=".09 .10 .11 1" mesh="link4" name="left_link4_geom" contype="1" conaffinity="6" friction="1 .01 .002" condim="4" solref=".006 1" />
+              <body name="left_link5" pos="0 0 0" quat="0.707105 -0.707108 0 0">
+                <inertial pos="-4.10554e-05 -0.0566487 -0.00372058" quat="0.492375 0.506639 0.49332 0.507463" mass="0.134101" diaginertia="5.27778e-05 4.60364e-05 4.10994e-05" />
+                <joint name="left_joint5" pos="0 0 0" axis="0 0 1" limited="true" range="-1.22 1.22" damping="2" solreflimit=".003 1" solimplimit=".99 .999 .001" />
+                <geom type="mesh" rgba=".09 .10 .11 1" mesh="link5" name="left_link5_geom" contype="1" conaffinity="6" friction="1 .01 .002" condim="4" solref=".006 1" />
+                <body name="left_link6" pos="8.8259e-05 -0.091 0" quat="0.707105 0.707108 0 0">
+                  <inertial pos="-0.000179422 7.72241e-05 0.0305765" quat="0.498967 0.497649 -0.502223 0.501147" mass="0.152309" diaginertia="0.000119759 0.000110059 4.99704e-05" />
+                  <joint name="left_joint6" pos="0 0 0" axis="0 0 1" limited="true" range="-2.0944 2.0944" damping="2" solreflimit=".003 1" solimplimit=".99 .999 .001" />
+                  <geom type="mesh" rgba=".09 .10 .11 1" mesh="link6" name="left_link6_geom" contype="1" conaffinity="6" friction="1 .01 .002" condim="4" solref=".006 1" />
+                  <geom type="mesh" rgba=".09 .10 .11 1" mesh="gripper_base" name="left_gripper_base_geom" contype="1" conaffinity="6" friction="1 .01 .002" condim="4" solref=".006 1" />
+                  <body name="left_link7" pos="0 0 0.1358" quat="0.707105 0.707108 0 0">
+                    <inertial pos="0.000651232 -0.049193 0.00972259" quat="0.519774 0.479905 -0.436488 0.555881" mass="0.0303535" diaginertia="1.60353e-05 1.14217e-05 5.97329e-06" />
+                    <joint name="left_joint7" pos="0 0 0" axis="0 0 1" type="slide" limited="true" range="0 .0475" damping="10" solreflimit=".003 1" solimplimit=".99 .999 .001" />
+                    <geom type="mesh" rgba=".09 .10 .11 1" mesh="link7" name="left_link7_geom" contype="1" conaffinity="6" friction="1 .01 .002" condim="4" solref=".006 1" />
+                    <geom name="left_finger_pad_7" type="box" pos="0.0 -0.022799987271867682 0.003000096732219132" quat="-0.7071052811843601 0.707108281185553 0.0 0.0" size=".02 .003 .021" mass=".001" contype="1" conaffinity="6" condim="4" friction="1 .01 .002" solref=".006 1" rgba=".04 .04 .04 1" />
+                  </body>
+                  <body name="left_link8" pos="0 0 0.1358" quat="-2.59734e-06 -2.59735e-06 -0.707108 -0.707105">
+                    <inertial pos="0.000651232 -0.049193 0.00972259" quat="0.519774 0.479905 -0.436488 0.555881" mass="0.0303535" diaginertia="1.60353e-05 1.14217e-05 5.97329e-06" />
+                    <joint name="left_joint8" pos="0 0 0" axis="0 0 -1" type="slide" limited="true" range="-.0475 0" damping="10" solreflimit=".003 1" solimplimit=".99 .999 .001" />
+                    <geom type="mesh" rgba=".09 .10 .11 1" mesh="link8" name="left_link8_geom" contype="1" conaffinity="6" friction="1 .01 .002" condim="4" solref=".006 1" />
+                    <geom name="left_finger_pad_8" type="box" pos="2.203924479098847e-08 -0.02279998727186768 0.0030000967321381806" quat="-2.5973410328296305e-06 2.5973510328336068e-06 0.7071082811807828 0.7071052811795898" size=".02 .003 .021" mass=".001" contype="1" conaffinity="6" condim="4" friction="1 .01 .002" solref=".006 1" rgba=".04 .04 .04 1" />
+                  </body>
+                  <site name="arm_left_tool" pos="0 0 .133669403578" />
+                  <camera name="left_wrist_rgbd" pos="0 .04 .07" xyaxes="1 0 0 0 -1 0" fovy="60" />
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="right_base" pos="-0.2882239821 -0.2870927502 0.7447380123" quat="0.7186054464 0 0 -0.6954180127">
+      <geom type="mesh" rgba=".09 .10 .11 1" mesh="base_link" name="right_base_link_geom" contype="1" conaffinity="6" friction="1 .01 .002" condim="4" solref=".006 1" />
+      <body name="right_link1" pos="0 0 0.123">
+        <inertial pos="0.000121505 0.000104632 -0.00438597" quat="0.486797 0.49897 -0.50059 0.513292" mass="0.215052" diaginertia="0.000116369 0.00010964 9.9555e-05" />
+        <joint name="right_joint1" pos="0 0 0" axis="0 0 1" limited="true" range="-2.618 2.168" damping="2" solreflimit=".003 1" solimplimit=".99 .999 .001" />
+        <geom type="mesh" rgba=".09 .10 .11 1" mesh="link1" name="right_link1_geom" contype="1" conaffinity="6" friction="1 .01 .002" condim="4" solref=".006 1" />
+        <body name="right_link2" pos="0 0 0" quat="0.0356735 -0.0356786 -0.706207 -0.706205">
+          <inertial pos="0.198666 -0.0109269 0.00142122" quat="0.0189031 0.705267 -0.0456298 0.707219" mass="0.463914" diaginertia="0.00104423 0.0010069 0.000207486" />
+          <joint name="right_joint2" pos="0 0 0" axis="0 0 1" limited="true" range="0 3.14" damping="2" solreflimit=".003 1" solimplimit=".99 .999 .001" />
+          <geom type="mesh" rgba=".09 .10 .11 1" mesh="link2" name="right_link2_geom" contype="1" conaffinity="6" friction="1 .01 .002" condim="4" solref=".006 1" />
+          <body name="right_link3" pos="0.28503 0 0" quat="0.637536 0 0 -0.77042">
+            <inertial pos="-0.0202738 -0.133915 -0.000458683" quat="0.528127 0.491307 -0.505056 0.473938" mass="0.219942" diaginertia="0.000201238 0.000190068 7.08709e-05" />
+            <joint name="right_joint3" pos="0 0 0" axis="0 0 1" limited="true" range="-2.967 0" damping="2" solreflimit=".003 1" solimplimit=".99 .999 .001" />
+            <geom type="mesh" rgba=".09 .10 .11 1" mesh="link3" name="right_link3_geom" contype="1" conaffinity="6" friction="1 .01 .002" condim="4" solref=".006 1" />
+            <body name="right_link4" pos="-0.021984 -0.25075 0" quat="0.707105 0.707108 0 0">
+              <inertial pos="-9.66636e-05 0.000876064 -0.00496881" quat="0.512749 0.48584 0.481646 0.518714" mass="0.131814" diaginertia="5.1333e-05 4.14831e-05 3.96892e-05" />
+              <joint name="right_joint4" pos="0 0 0" axis="0 0 1" limited="true" range="-1.745 1.745" damping="2" solreflimit=".003 1" solimplimit=".99 .999 .001" />
+              <geom type="mesh" rgba=".09 .10 .11 1" mesh="link4" name="right_link4_geom" contype="1" conaffinity="6" friction="1 .01 .002" condim="4" solref=".006 1" />
+              <body name="right_link5" pos="0 0 0" quat="0.707105 -0.707108 0 0">
+                <inertial pos="-4.10554e-05 -0.0566487 -0.00372058" quat="0.492375 0.506639 0.49332 0.507463" mass="0.134101" diaginertia="5.27778e-05 4.60364e-05 4.10994e-05" />
+                <joint name="right_joint5" pos="0 0 0" axis="0 0 1" limited="true" range="-1.22 1.22" damping="2" solreflimit=".003 1" solimplimit=".99 .999 .001" />
+                <geom type="mesh" rgba=".09 .10 .11 1" mesh="link5" name="right_link5_geom" contype="1" conaffinity="6" friction="1 .01 .002" condim="4" solref=".006 1" />
+                <body name="right_link6" pos="8.8259e-05 -0.091 0" quat="0.707105 0.707108 0 0">
+                  <inertial pos="-0.000179422 7.72241e-05 0.0305765" quat="0.498967 0.497649 -0.502223 0.501147" mass="0.152309" diaginertia="0.000119759 0.000110059 4.99704e-05" />
+                  <joint name="right_joint6" pos="0 0 0" axis="0 0 1" limited="true" range="-2.0944 2.0944" damping="2" solreflimit=".003 1" solimplimit=".99 .999 .001" />
+                  <geom type="mesh" rgba=".09 .10 .11 1" mesh="link6" name="right_link6_geom" contype="1" conaffinity="6" friction="1 .01 .002" condim="4" solref=".006 1" />
+                  <geom type="mesh" rgba=".09 .10 .11 1" mesh="gripper_base" name="right_gripper_base_geom" contype="1" conaffinity="6" friction="1 .01 .002" condim="4" solref=".006 1" />
+                  <body name="right_link7" pos="0 0 0.1358" quat="0.707105 0.707108 0 0">
+                    <inertial pos="0.000651232 -0.049193 0.00972259" quat="0.519774 0.479905 -0.436488 0.555881" mass="0.0303535" diaginertia="1.60353e-05 1.14217e-05 5.97329e-06" />
+                    <joint name="right_joint7" pos="0 0 0" axis="0 0 1" type="slide" limited="true" range="0 .0475" damping="10" solreflimit=".003 1" solimplimit=".99 .999 .001" />
+                    <geom type="mesh" rgba=".09 .10 .11 1" mesh="link7" name="right_link7_geom" contype="1" conaffinity="6" friction="1 .01 .002" condim="4" solref=".006 1" />
+                    <geom name="right_finger_pad_7" type="box" pos="0.0 -0.022799987271867682 0.003000096732219132" quat="-0.7071052811843601 0.707108281185553 0.0 0.0" size=".02 .003 .021" mass=".001" contype="1" conaffinity="6" condim="4" friction="1 .01 .002" solref=".006 1" rgba=".04 .04 .04 1" />
+                  </body>
+                  <body name="right_link8" pos="0 0 0.1358" quat="-2.59734e-06 -2.59735e-06 -0.707108 -0.707105">
+                    <inertial pos="0.000651232 -0.049193 0.00972259" quat="0.519774 0.479905 -0.436488 0.555881" mass="0.0303535" diaginertia="1.60353e-05 1.14217e-05 5.97329e-06" />
+                    <joint name="right_joint8" pos="0 0 0" axis="0 0 -1" type="slide" limited="true" range="-.0475 0" damping="10" solreflimit=".003 1" solimplimit=".99 .999 .001" />
+                    <geom type="mesh" rgba=".09 .10 .11 1" mesh="link8" name="right_link8_geom" contype="1" conaffinity="6" friction="1 .01 .002" condim="4" solref=".006 1" />
+                    <geom name="right_finger_pad_8" type="box" pos="2.203924479098847e-08 -0.02279998727186768 0.0030000967321381806" quat="-2.5973410328296305e-06 2.5973510328336068e-06 0.7071082811807828 0.7071052811795898" size=".02 .003 .021" mass=".001" contype="1" conaffinity="6" condim="4" friction="1 .01 .002" solref=".006 1" rgba=".04 .04 .04 1" />
+                  </body>
+                  <site name="arm_right_tool" pos="0 0 .133669403578" />
+                  <camera name="right_wrist_rgbd" pos="0 .04 .07" xyaxes="1 0 0 0 -1 0" fovy="60" />
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="worktable" pos="0.0 -0.75 0">
+      <geom name="worktable_top" type="mesh" pos="0 0 0.725" contype="2" conaffinity="1" rgba=".88 .88 .86 1" mesh="engineered_equivalent_worktable_top" />
+      <geom name="worktable_leg_0" type="mesh" pos="-0.53 -0.33 0.35" contype="2" conaffinity="1" rgba=".25 .27 .3 1" mesh="engineered_equivalent_worktable_leg_0" />
+      <geom name="worktable_leg_1" type="mesh" pos="-0.53 0.33 0.35" contype="2" conaffinity="1" rgba=".25 .27 .3 1" mesh="engineered_equivalent_worktable_leg_1" />
+      <geom name="worktable_leg_2" type="mesh" pos="0.53 -0.33 0.35" contype="2" conaffinity="1" rgba=".25 .27 .3 1" mesh="engineered_equivalent_worktable_leg_2" />
+      <geom name="worktable_leg_3" type="mesh" pos="0.53 0.33 0.35" contype="2" conaffinity="1" rgba=".25 .27 .3 1" mesh="engineered_equivalent_worktable_leg_3" />
+      <inertial pos="0.0 0.0 0.677272727272727" quat="0.0 0.7071067811865476 0.0 0.7071067811865476" mass="55.0" diaginertia="11.051516666666664 8.882682575757578 4.478682575757576" />
+    </body>
+    <geom name="floor" type="plane" size="3 3 .1" rgba=".5 .5 .5 1" contype="2" conaffinity="13" />
+    <camera name="rssr_head" pos="0 -0.32 1.45" quat="-0 0 0.273742659 0.9618029718" fovy="55" />
+    <light pos="0 -.7 2.5" dir="0 0 -1" diffuse=".7 .7 .7" />
+    <body name="cup_left_base" pos="0.196333659438 -0.752992549525 0.7928" quat="0.999800006667 0 0 -0.0199986666933">
+      <freejoint name="cup_left_base_free" />
+      <geom name="cup_left_base_bottom" type="cylinder" size="0.0375 0.0015" pos="0 0 -0.041" mass="0.012" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" />
+      <geom name="cup_left_base_wall_0" type="box" size="0.0015 0.00716084522567 0.0425" pos="0.036 0 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 0" />
+      <geom name="cup_left_base_wall_1" type="box" size="0.0015 0.00716084522567 0.0425" pos="0.0332596631704 0.0137766035651 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 0.392699081699" />
+      <geom name="cup_left_base_wall_2" type="box" size="0.0015 0.00716084522567 0.0425" pos="0.0254558441227 0.0254558441227 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 0.785398163397" />
+      <geom name="cup_left_base_wall_3" type="box" size="0.0015 0.00716084522567 0.0425" pos="0.0137766035651 0.0332596631704 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 1.1780972451" />
+      <geom name="cup_left_base_wall_4" type="box" size="0.0015 0.00716084522567 0.0425" pos="2.20436423847e-18 0.036 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 1.57079632679" />
+      <geom name="cup_left_base_wall_5" type="box" size="0.0015 0.00716084522567 0.0425" pos="-0.0137766035651 0.0332596631704 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 1.96349540849" />
+      <geom name="cup_left_base_wall_6" type="box" size="0.0015 0.00716084522567 0.0425" pos="-0.0254558441227 0.0254558441227 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 2.35619449019" />
+      <geom name="cup_left_base_wall_7" type="box" size="0.0015 0.00716084522567 0.0425" pos="-0.0332596631704 0.0137766035651 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 2.74889357189" />
+      <geom name="cup_left_base_wall_8" type="box" size="0.0015 0.00716084522567 0.0425" pos="-0.036 4.40872847693e-18 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 3.14159265359" />
+      <geom name="cup_left_base_wall_9" type="box" size="0.0015 0.00716084522567 0.0425" pos="-0.0332596631704 -0.0137766035651 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 3.53429173529" />
+      <geom name="cup_left_base_wall_10" type="box" size="0.0015 0.00716084522567 0.0425" pos="-0.0254558441227 -0.0254558441227 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 3.92699081699" />
+      <geom name="cup_left_base_wall_11" type="box" size="0.0015 0.00716084522567 0.0425" pos="-0.0137766035651 -0.0332596631704 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 4.31968989869" />
+      <geom name="cup_left_base_wall_12" type="box" size="0.0015 0.00716084522567 0.0425" pos="-6.6130927154e-18 -0.036 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 4.71238898038" />
+      <geom name="cup_left_base_wall_13" type="box" size="0.0015 0.00716084522567 0.0425" pos="0.0137766035651 -0.0332596631704 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 5.10508806208" />
+      <geom name="cup_left_base_wall_14" type="box" size="0.0015 0.00716084522567 0.0425" pos="0.0254558441227 -0.0254558441227 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 5.49778714378" />
+      <geom name="cup_left_base_wall_15" type="box" size="0.0015 0.00716084522567 0.0425" pos="0.0332596631704 -0.0137766035651 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 5.89048622548" />
+    </body>
+    <body name="cup_right_upper" pos="-0.325945657563 -0.695916436656 0.7928" quat="0.999687516276 0 0 0.0249973959147">
+      <freejoint name="cup_right_upper_free" />
+      <geom name="cup_right_upper_bottom" type="cylinder" size="0.02925 0.0015" pos="0 0 -0.041" mass="0.012" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" />
+      <geom name="cup_right_upper_wall_0" type="box" size="0.0015 0.00551981819479 0.0425" pos="0.02775 0 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 0" />
+      <geom name="cup_right_upper_wall_1" type="box" size="0.0015 0.00551981819479 0.0425" pos="0.0256376570272 0.0106194652481 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 0.392699081699" />
+      <geom name="cup_right_upper_wall_2" type="box" size="0.0015 0.00551981819479 0.0425" pos="0.0196222131779 0.0196222131779 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 0.785398163397" />
+      <geom name="cup_right_upper_wall_3" type="box" size="0.0015 0.00551981819479 0.0425" pos="0.0106194652481 0.0256376570272 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 1.1780972451" />
+      <geom name="cup_right_upper_wall_4" type="box" size="0.0015 0.00551981819479 0.0425" pos="1.69919743382e-18 0.02775 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 1.57079632679" />
+      <geom name="cup_right_upper_wall_5" type="box" size="0.0015 0.00551981819479 0.0425" pos="-0.0106194652481 0.0256376570272 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 1.96349540849" />
+      <geom name="cup_right_upper_wall_6" type="box" size="0.0015 0.00551981819479 0.0425" pos="-0.0196222131779 0.0196222131779 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 2.35619449019" />
+      <geom name="cup_right_upper_wall_7" type="box" size="0.0015 0.00551981819479 0.0425" pos="-0.0256376570272 0.0106194652481 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 2.74889357189" />
+      <geom name="cup_right_upper_wall_8" type="box" size="0.0015 0.00551981819479 0.0425" pos="-0.02775 3.39839486763e-18 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 3.14159265359" />
+      <geom name="cup_right_upper_wall_9" type="box" size="0.0015 0.00551981819479 0.0425" pos="-0.0256376570272 -0.0106194652481 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 3.53429173529" />
+      <geom name="cup_right_upper_wall_10" type="box" size="0.0015 0.00551981819479 0.0425" pos="-0.0196222131779 -0.0196222131779 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 3.92699081699" />
+      <geom name="cup_right_upper_wall_11" type="box" size="0.0015 0.00551981819479 0.0425" pos="-0.0106194652481 -0.0256376570272 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 4.31968989869" />
+      <geom name="cup_right_upper_wall_12" type="box" size="0.0015 0.00551981819479 0.0425" pos="-5.09759230145e-18 -0.02775 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 4.71238898038" />
+      <geom name="cup_right_upper_wall_13" type="box" size="0.0015 0.00551981819479 0.0425" pos="0.0106194652481 -0.0256376570272 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 5.10508806208" />
+      <geom name="cup_right_upper_wall_14" type="box" size="0.0015 0.00551981819479 0.0425" pos="0.0196222131779 -0.0196222131779 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 5.49778714378" />
+      <geom name="cup_right_upper_wall_15" type="box" size="0.0015 0.00551981819479 0.0425" pos="0.0256376570272 -0.0106194652481 0" mass="0.003" contype="4" conaffinity="15" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.56 0.38 0.19 1" euler="0 0 5.89048622548" />
+    </body>
+    <body name="stack_region" pos="-0.035790289557 -0.68027195466 0.7518" quat="1 0 0 0">
+      <geom name="stack_region_geom" type="box" size="0.09 0.08 0.0015" pos="0 0 0" mass="0.001" contype="0" conaffinity="0" condim="4" friction="1 .01 .002" solref=".006 1" solimp=".95 .99 .001" rgba="0.05 0.05 0.05 0.35" />
+    </body>
+  </worldbody>
+  <actuator>
+    <position name="left_joint1" ctrllimited="true" ctrlrange="-2.618 2.618" joint="left_joint1" kp="1000" user="1" forcelimited="true" forcerange="-100 100" />
+    <position name="left_joint2" ctrllimited="true" ctrlrange="0 3.14158" joint="left_joint2" kp="1000" user="1" forcelimited="true" forcerange="-100 100" />
+    <position name="left_joint3" ctrllimited="true" ctrlrange="-2.697 0" joint="left_joint3" kp="1000" user="1" forcelimited="true" forcerange="-100 100" />
+    <position name="left_joint4" ctrllimited="true" ctrlrange="-1.832 1.832" joint="left_joint4" kp="1000" user="1" forcelimited="true" forcerange="-100 100" />
+    <position name="left_joint5" ctrllimited="true" ctrlrange="-1.22 1.22" joint="left_joint5" kp="1000" user="1" forcelimited="true" forcerange="-100 100" />
+    <position name="left_joint6" ctrllimited="true" ctrlrange="-3.14158 3.14158" joint="left_joint6" kp="1000" user="1" forcelimited="true" forcerange="-100 100" />
+    <position name="left_joint7" ctrllimited="true" ctrlrange="0 0.0475" joint="left_joint7" kp="1000" user="1" forcelimited="true" forcerange="-12 12" />
+    <position name="left_joint8" ctrllimited="true" ctrlrange="-0.0475 0" joint="left_joint8" kp="1000" user="1" forcelimited="true" forcerange="-12 12" />
+    <position name="right_joint1" ctrllimited="true" ctrlrange="-2.618 2.618" joint="right_joint1" kp="1000" user="1" forcelimited="true" forcerange="-100 100" />
+    <position name="right_joint2" ctrllimited="true" ctrlrange="0 3.14158" joint="right_joint2" kp="1000" user="1" forcelimited="true" forcerange="-100 100" />
+    <position name="right_joint3" ctrllimited="true" ctrlrange="-2.697 0" joint="right_joint3" kp="1000" user="1" forcelimited="true" forcerange="-100 100" />
+    <position name="right_joint4" ctrllimited="true" ctrlrange="-1.832 1.832" joint="right_joint4" kp="1000" user="1" forcelimited="true" forcerange="-100 100" />
+    <position name="right_joint5" ctrllimited="true" ctrlrange="-1.22 1.22" joint="right_joint5" kp="1000" user="1" forcelimited="true" forcerange="-100 100" />
+    <position name="right_joint6" ctrllimited="true" ctrlrange="-3.14158 3.14158" joint="right_joint6" kp="1000" user="1" forcelimited="true" forcerange="-100 100" />
+    <position name="right_joint7" ctrllimited="true" ctrlrange="0 0.0475" joint="right_joint7" kp="1000" user="1" forcelimited="true" forcerange="-12 12" />
+    <position name="right_joint8" ctrllimited="true" ctrlrange="-0.0475 0" joint="right_joint8" kp="1000" user="1" forcelimited="true" forcerange="-12 12" />
+  </actuator>
+  <visual>
+    <quality shadowsize="2048" />
+  </visual>
+</mujoco>

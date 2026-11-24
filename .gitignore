@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+envs/
+
+# External robot assets (fetched via scripts/setup_third_party_assets.sh)
+third_party/
+
+# Runtime outputs & scratch runs
+outputs/
+runs/
+work/
+tmp/
+*.log
+
+# Secrets / credentials (never commit)
+.env
+.env.*
+*.env
+.secrets/
+*token*
+*.pem
+*.key
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
