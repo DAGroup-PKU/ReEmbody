@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <b>| <a href="https://dagroup-pku.github.io/ReEmbody.github.io/">Project Page</a> | <a href="https://dagroup-pku.github.io/ReEmbody.github.io/assets/ReEmbody-paper.pdf">Paper</a> | <a href="docs/PIPELINE.md">Pipeline</a> | <a href="examples/README.md">Examples</a> |</b>
+  <b>| <a href="https://dagroup-pku.github.io/ReEmbody.github.io/">Project Page</a> | <a href="docs/PIPELINE.md">Pipeline</a> | <a href="examples/README.md">Examples</a> |</b>
 </p>
 
 <p align="center">
