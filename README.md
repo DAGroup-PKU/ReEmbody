@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/assets/icon.png" alt="ReEmbody" width="76" />
+</p>
+
 <h1 align="center">ReEmbody: Cross-Embodiment Data Reuse for Real-World Robot Learning</h1>
 
 <p align="center">
