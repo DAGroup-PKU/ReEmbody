@@ -30,7 +30,8 @@ tmp/
 .env.*
 *.env
 .secrets/
-*token*
+*.token
+*hf_token*
 *.pem
 *.key
 
