@@ -1,8 +1,11 @@
 <p align="center">
-  <img src="docs/assets/icon.png" alt="ReEmbody" width="76" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/logo_banner_dark.png" />
+    <img src="docs/assets/logo_banner.png" alt="ReEmbody" width="340" />
+  </picture>
 </p>
 
-<h1 align="center">ReEmbody: Cross-Embodiment Data Reuse for Real-World Robot Learning</h1>
+<h2 align="center">ReEmbody: Cross-Embodiment Data Reuse for Real-World Robot Learning</h2>
 
 <p align="center">
   <b>Yichen Liu</b>, Guodong Lv, Yintianrun Zhang, Quanwei Zhang, Shilong Li, Hongyu Zhang,<br/>
