@@ -20,10 +20,10 @@ fi
 
 MENAGERIE_DIR="${THIRD_PARTY}/mujoco_menagerie"
 if [ ! -d "${MENAGERIE_DIR}/.git" ]; then
-  echo "[2/2] Sparse-cloning mujoco_menagerie (franka_fr3_v2, robotiq_2f85, franka_emika_panda)..."
+  echo "[2/2] Sparse-cloning mujoco_menagerie (franka_fr3_v2, robotiq_2f85)..."
   git clone --depth 1 --filter=blob:none --sparse \
     https://github.com/google-deepmind/mujoco_menagerie.git "${MENAGERIE_DIR}"
-  git -C "${MENAGERIE_DIR}" sparse-checkout set franka_fr3_v2 robotiq_2f85 franka_emika_panda
+  git -C "${MENAGERIE_DIR}" sparse-checkout set franka_fr3_v2 robotiq_2f85
 else
   echo "[2/2] mujoco_menagerie already present at ${MENAGERIE_DIR}"
 fi
